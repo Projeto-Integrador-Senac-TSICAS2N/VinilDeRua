@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* fontes */
+    --fontePrimaria: 'Caesar Dressing', cursive;
+    --fonteSecundaria: 'Anton', sans-serif;
+    /* Cores */
+    --gradienteVertical1: linear-gradient(180deg, rgba(191, 191, 191, 1) 0%, rgba(81, 81, 81, 1) 100%);
+    --gradienteVertical2: linear-gradient(180deg, rgba(81, 81, 81, 1) 0%, rgba(191, 191, 191, 1) 100%);
+    --gradienteCardDiscos: linear-gradient(-41deg, rgba(159, 159, 159, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    /* drop shadow discos */
+    --dropShadowDiscos: box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.404);
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.logoPerfil {
+    display: flex;
+    align-items: center;
+    gap: 66px;
+    margin-bottom: 43px;
+}
+
+.logoPerfil img {
+    width: 122px;
+    height: 125px;
+}
+
+.logoPerfil h1 {
+    font-family: var(--fonteSecundaria);
+    font-size: 46px;
+    line-height: 50px;
+    letter-spacing: 2px;
+}
+
+.infoUser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.infoUser input {
+    padding: 16px 70px;
+    border-radius: 4px;
+}
+
+.inputUser {
+    background: url("https://i.ibb.co/JRnw49nv/userIcon.png") no-repeat 10px center;
+    padding-left: 28px;
+}
+
+.infoUser .placeholder {
+    padding: 0px 43px;
+}
+
+.inputPass {
+    background: url("https://i.ibb.co/ksQQ9fwr/lockIcon.png") no-repeat 10px center;
+    padding-left: 28px;
+}
+
+.buttonLogin{
+    display: flex;
+    margin-top: 22px;
+    margin-bottom: 11px;
+    gap: 25px;
+}
+.buttonLogin button {
+    font-family: var(--);
+    letter-spacing: 3px;
+    background: #1b1b1b;
+    color: #FFFFFF;
+    padding: 15px 23px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.esqueceuSenha{
+    display: flex;
+    justify-content: flex-end;
+
+
+}
