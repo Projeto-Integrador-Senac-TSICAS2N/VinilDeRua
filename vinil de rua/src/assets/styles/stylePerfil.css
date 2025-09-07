@@ -35,6 +35,9 @@ main {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background: url(https://i.ibb.co/0RkwyFRy/fundo-Login.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .logoPerfil {
@@ -98,9 +101,76 @@ main {
     cursor: pointer;
 }
 
-.esqueceuSenha{
+
+.esqueceuSenha span a {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    color: #1b1b1b;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Criando o underline falso */
+.esqueceuSenha span a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; 
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #1b1b1b;
+    transition: width 0.3s ease-in-out; 
+}
+
+.esqueceuSenha span a:hover::after {
+    width: 100%;
+}
+
+/* container que guarda login e forgot */
+.form-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 550px; 
+    overflow: hidden;
+}
+
+.form-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    background: transparent;
+    transition: transform 0.6s ease;
+}
 
 
+.login-box {
+    transform: translateX(0);
+}
+
+.forgot-box {
+    transform: translateX(100%);
+}
+
+.form-container.show-forgot .login-box {
+    transform: translateX(-100%);
+}
+.form-container.show-forgot .forgot-box {
+    transform: translateX(0);
+}
+
+.mensagemErro {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 12px;
 }

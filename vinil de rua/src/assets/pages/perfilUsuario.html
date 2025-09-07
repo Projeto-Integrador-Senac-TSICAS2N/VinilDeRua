@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu perfil - Vinil de Rua</title>
+    <title>Login</title>
     <!-- FONTES USADASS -->
     <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,26 +23,56 @@
     </div>
 
     <main>
-        <div class="logoPerfil">
-            <img src="https://i.ibb.co/sdGgmwtK/logo-Vd-RBlack.png" alt="Logo Vinil de Rua">
-            <h1>VINIL <br> DE RUA</h1>
-        </div>
-        <div class="infoUser">
-            <input type="text" placeholder="USUÁRIO" class="inputUser">
-            <input type="password" placeholder="SENHA" class="inputPass">
-        </div>
+        <div class="form-container">
 
-        <div class="buttonLogin">
-            <button>CRIAR CONTA</button>
-            <button>LOGIN</button>
-        </div>
-        <div class="esqueceuSenha">
-            <a href="">Esqueceu a sua senha?</a>
+            <!-- Tela de Login -->
+            <div class="login-box form-box">
+                <div class="logoPerfil">
+                    <img src="https://i.ibb.co/sdGgmwtK/logo-Vd-RBlack.png" alt="Logo Vinil de Rua">
+                    <h1>VINIL <br> DE RUA</h1>
+                </div>
+                <div class="infoUser">
+                    <input type="text" placeholder="USUÁRIO" class="inputUser">
+                    <input type="password" placeholder="SENHA" class="inputPass">
+                </div>
+                <div class="buttonLogin">
+                    <button id="criarConta">CRIAR CONTA</button>
+                    <button id="login" onclick="window.open('/index.html', '_blank')">LOGIN</button>
+                </div>
+                <div class="esqueceuSenha">
+                    <span><a href="#" onclick="showForgot()">Esqueceu a sua senha?</a></span>
+                </div>
+            </div>
+
+            <!-- Tela de Recuperar Senha -->
+            <div class="forgot-box form-box">
+                <div class="logoPerfil">
+                    <img src="https://i.ibb.co/sdGgmwtK/logo-Vd-RBlack.png" alt="Logo Vinil de Rua">
+                    <h1>VINIL <br> DE RUA</h1>
+                </div>
+                <div class="mensagemErro">
+                    <h1>Calma! Iremos recuperar sua senha.</h1>
+                </div>
+                <div class="infoUser">
+                    <input type="email" placeholder="EMAIL" class="inputUser">
+                    <input type="password" placeholder="SENHA" class="inputUser">
+                </div>
+
+                <div class="buttonLogin">
+                    <button id="recuperarSenha">ENVIAR</button>
+                </div>
+                <div class="esqueceuSenha">
+                    <span><a href="#" onclick="showLogin()">Voltar ao login</a></span>
+                </div>
+            </div>
+
         </div>
     </main>
 
+
     <script src="/src/assets/scripts/navbar.js"></script>
     <script src="/src/assets/scripts/loading.js"></script>
+    <script src="/src/assets/scripts/trocaLogin.js"></script>
 </body>
 
 </html>
