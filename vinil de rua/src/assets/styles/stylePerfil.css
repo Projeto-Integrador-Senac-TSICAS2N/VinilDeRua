@@ -174,3 +174,21 @@ main {
     text-align: center;
     font-size: 12px;
 }
+
+/* criar conta começa escondido embaixo */
+.criarConta-box {
+    transform: translateY(100%);
+}
+
+/* quando ativar criar conta */
+.form-container.show-criarConta .login-box,
+.form-container.show-criarConta .forgot-box {
+    transform: translateY(-100%); /* sobe e sai da tela */
+}
+
+.form-container.show-criarConta .criarConta-box {
+    transform: translateY(0); /* sobe e aparece */
+}
+
+
+

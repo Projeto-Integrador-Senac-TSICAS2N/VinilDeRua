@@ -194,13 +194,15 @@ main {
 
 
 .catalogoIndex {
+  padding-top: 100px;
   padding-bottom: 1000px;
+  padding-right: 40px;
   background: var(--gradienteVertical2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 224px); 
+  gap: 42px; /* diminui o espaço entre eles */
   font-family: Arial, sans-serif;
-  gap: 42px;
+  justify-content: right; /* centraliza o grid no meio da tela */
 }
 
 .cardDisco {
@@ -292,3 +294,16 @@ main {
   content: url("https://i.ibb.co/DPg9f9c3/add-shopping-cart-3.png");
 }
      
+.btnVerMais img{
+  width: 24px;
+  height: 15px;
+  align-items: center;
+  margin-left: 5px;
+}
+.btnVerMais button{
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 5px;
+  font-family: var(--fonteSecundaria);
+  cursor: pointer;
+}
