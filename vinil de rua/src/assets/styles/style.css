@@ -9,6 +9,7 @@
   /* fontes */
   --fontePrimaria: 'Caesar Dressing', cursive;
   --fonteSecundaria: 'Anton', sans-serif;
+  --fonteTerciaria: "Young Serif", serif;
   /* Cores */
   --gradienteVertical1: linear-gradient(180deg, rgba(191, 191, 191, 1) 0%, rgba(81, 81, 81, 1) 100%);
   --gradienteVertical2: linear-gradient(180deg, rgba(81, 81, 81, 1) 0%, rgba(191, 191, 191, 1) 100%);
@@ -41,7 +42,6 @@ header {
   background-color: #7E7E7E;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.404);
   position: fixed;
-  /* fixa no topo */
   top: 0;
   left: 0;
   z-index: 1000;
@@ -62,8 +62,8 @@ nav a {
 }
 
 header img {
-  width: 100px;
-  height: 88px;
+  width: 87px;
+  height: 87px;
 }
 
 .logoHeader {
@@ -103,9 +103,9 @@ header.scrolled {
 }
 
 header.scrolled .logoHeader img {
-  content: url("https://i.ibb.co/wFWzNWL2/logo-Vinil-De-Rua-preta.png");
-  width: 100px;
-  height: 88px;
+  content: url("https://i.ibb.co/RknvXKX2/logo-Vinil-De-Rua-preta.png");
+  width: 87px;
+  height: 87px;
 }
 
 header.scrolled .logoHeader p {
@@ -189,20 +189,23 @@ main {
 
 */
 
+.fundoPrincipal{
+    background: var(--gradienteVertical2);
 
+}
 
 
 
 .catalogoIndex {
   padding-top: 100px;
-  padding-bottom: 1000px;
   padding-right: 40px;
-  background: var(--gradienteVertical2);
   display: grid;
-  grid-template-columns: repeat(4, 224px); 
-  gap: 42px; /* diminui o espaço entre eles */
+  grid-template-columns: repeat(4, 224px);
+  gap: 42px;
+  /* diminui o espaço entre eles */
   font-family: Arial, sans-serif;
-  justify-content: right; /* centraliza o grid no meio da tela */
+  justify-content: right;
+  /* centraliza o grid no meio da tela */
 }
 
 .cardDisco {
@@ -215,7 +218,7 @@ main {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
   transition: transform 0.2s ease;
 }
 
@@ -233,17 +236,18 @@ main {
   align-items: center;
 }
 
-.cardDisco .imgCard > img {
+.cardDisco .imgCard>img {
   max-width: 100%;
   height: auto;
   display: block;
-  object-fit: contain; 
+  object-fit: contain;
 }
 
 .infoDisco {
   font-size: 15px;
   padding-bottom: 20px;
 }
+
 .infoDisco .preçoDisco {
   padding-top: 4px;
   font-weight: bold;
@@ -255,7 +259,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 7px; 
+  margin-bottom: 7px;
 }
 
 .preçoEFavDisco button {
@@ -264,9 +268,10 @@ main {
   padding: 2px 12px;
   font-family: var(--fontePrimaria);
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
-.preçoEFavDisco button:hover{
+
+.preçoEFavDisco button:hover {
   background-color: #acacac;
   color: #ffffff;
   border: 2.2px solid #ffffff;
@@ -274,13 +279,14 @@ main {
   box-shadow: 12px 12px 12px 2px rgba(0, 0, 0, 0.2);
 }
 
-.preçoEFavDisco .favorite img{
+.preçoEFavDisco .favorite img {
   width: 20px;
   height: 20px;
   transition: color 0.8s ease-in-out;
   cursor: pointer;
 }
-.preçoEFavDisco .cart img{
+
+.preçoEFavDisco .cart img {
   width: 20px;
   height: 20px;
   transition: color 0.8s ease-in-out;
@@ -290,20 +296,102 @@ main {
 .preçoEFavDisco .favorite img:hover {
   content: url("https://i.ibb.co/b5vJrSGP/favorite-Red.png");
 }
+
 .preçoEFavDisco .cart img:hover {
   content: url("https://i.ibb.co/DPg9f9c3/add-shopping-cart-3.png");
 }
-     
-.btnVerMais img{
+
+.btnVerMais{
+  display: flex;
+  padding: 40px;
+  justify-content: right;
+}
+.btnVerMais img {
   width: 24px;
   height: 15px;
   align-items: center;
   margin-left: 5px;
 }
-.btnVerMais button{
+
+.btnVerMais button {
   align-items: center;
-  padding: 10px 12px;
+  padding: 10px 20px;
   border-radius: 5px;
   font-family: var(--fonteSecundaria);
   cursor: pointer;
 }
+
+
+
+
+
+
+
+footer {
+  background-color: #4C4C4C;
+  color: white;
+  padding: 30px;
+  border-radius: 30px 30px 0px 0px;
+
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerLogo img{
+  width: 117px;
+  height: 117px;
+}
+
+.footerLogo {
+  margin-left: 40px;
+  margin-top: 50px;
+  font-family: var(--fonteSecundaria);
+  letter-spacing: 2px;
+  line-height: 35px;
+}
+
+.socialConteiner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: var(--fonteTerciaria);
+}
+
+.socialConteiner hr{
+  margin-top: 16px;
+  margin-bottom: 11px;
+}
+
+
+.social {
+  font-size: 24px;
+  margin-top: 23px;
+  margin-bottom: 15px;
+}
+
+
+.socialLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.socialLogo img {
+  max-width: 30px;
+}
+
+.copyrightVdR{
+  display: flex;
+  border: 2px solid red;
+}
+
+.footerCtt h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
