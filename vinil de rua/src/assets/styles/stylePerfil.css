@@ -41,6 +41,7 @@ main {
 }
 
 .logoPerfil {
+
     display: flex;
     align-items: center;
     gap: 66px;
@@ -83,7 +84,9 @@ main {
 .inputPass {
     background: url("https://i.ibb.co/ksQQ9fwr/lockIcon.png") no-repeat 10px center;
     padding-left: 28px;
+
 }
+
 
 .buttonLogin{
     display: flex;
@@ -189,6 +192,5 @@ main {
 .form-container.show-criarConta .criarConta-box {
     transform: translateY(0); /* sobe e aparece */
 }
-
 
 
