@@ -133,7 +133,7 @@ header.scrolled .icons img {
 
 .cardTituloCarrinho {
 
-  margin-top: 165px;
+  padding-top: 165px;
   display: flex;
 }
 
@@ -156,7 +156,6 @@ header.scrolled .icons img {
   margin-top: 30px;
   margin-bottom: 40px;
   font-size: 28px;
-  border: 2px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,15 +201,54 @@ header.scrolled .icons img {
 
 
 
+.itensCarrinho{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 65px;
+  justify-content: center;
+  font-family: var(--fonteTerciaria);
+  padding-bottom: 112px;
+}
+
+.itemCar1{
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.itemCar1 img{
+  border: 2.5px solid #000000;
+  padding: 8px 5px;
+  border-radius: 0 100px 100px 0;
+}
+
+.itemCar1 .infoCarrinho{
+  border: 2.5px solid #000000;
+  padding: 15px 34px;
+  display: flex;
+  gap: 40px;
+}
 
 
 
+.itemCar1 .infoCarrinho .info{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 
+.info .menosUm{
+  background-color: #B5B5B5;
+  padding: 3px 3px;
+}
+/* .quntidade{
 
+}
 
+.maisUm{
 
-
-
+} */
 
 
 
