@@ -10,6 +10,7 @@
   --fontePrimaria: 'Caesar Dressing', cursive;
   --fonteSecundaria: 'Anton', sans-serif;
   --fonteTerciaria: "Young Serif", serif;
+  --fonteNumeros: "Sahitya", serif;
   /* Cores */
   --gradienteVertical1: linear-gradient(180deg, rgba(191, 191, 191, 1) 0%, rgba(81, 81, 81, 1) 100%);
   --gradienteVertical2: linear-gradient(180deg, rgba(81, 81, 81, 1) 0%, rgba(191, 191, 191, 1) 100%);
@@ -211,19 +212,19 @@ header.scrolled .icons img {
   padding-bottom: 112px;
 }
 
-.itemCar1{
+.itemCar{
   display: flex;
   gap: 25px;
   align-items: center;
 }
 
-.itemCar1 img{
+.itemCar .imgCar{
   border: 2.5px solid #000000;
   padding: 8px 5px;
   border-radius: 0 100px 100px 0;
 }
 
-.itemCar1 .infoCarrinho{
+.itemCar .infoCarrinho{
   border: 2.5px solid #000000;
   padding: 15px 34px;
   display: flex;
@@ -232,23 +233,50 @@ header.scrolled .icons img {
 
 
 
-.itemCar1 .infoCarrinho .info{
+.itemCar .infoCarrinho .info{
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.info .menosUm{
+
+.infoQuantidade{
+  display: flex;
+  justify-content: center;
+  border: 2px solid red;
+  font-size: 24px;
+}
+
+.infoQuantidade .menos{
   background-color: #B5B5B5;
-  padding: 3px 3px;
-}
-/* .quntidade{
-
+  padding: 5px;
 }
 
-.maisUm{
+.numeroQuant{
+  align-items: center;  
+  font-family: var(--fonteNumeros);
+  background-color: #ffffff;
+  padding: 5px;
+}
 
-} */
+.mais{
+  color: #FFFFFF;
+  background-color: #000000;
+  padding: 5px;
+}
+
+
+.itensCarrinho .deleteItem{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itensCarrinho .deleteItem img{
+  width: 47px;
+  height: 47px;
+}
+
 
 
 
