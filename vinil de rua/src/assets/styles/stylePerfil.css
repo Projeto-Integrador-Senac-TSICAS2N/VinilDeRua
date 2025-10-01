@@ -41,7 +41,6 @@ main {
 }
 
 .logoPerfil {
-
     display: flex;
     align-items: center;
     gap: 66px;
@@ -64,12 +63,30 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 20px;
 }
 
-.infoUser input {
-    padding: 16px 70px;
+.infoUser .inputSenha {
+    display: flex;
+    align-items: center;
     border-radius: 4px;
+    padding-right: 10px;
+    border: 2px solid #000000;
+}
+
+.infoUser .inputSenha input {
+    border: none;
+}
+
+.infoUser .inputSenha img {
+    cursor: pointer;
+}
+
+.infoUser input {
+    border-radius: 4px;
+    padding: 16px 70px;
+    border: 2px solid #000000;
 }
 
 .inputUser {
@@ -84,16 +101,15 @@ main {
 .inputPass {
     background: url("https://i.ibb.co/ksQQ9fwr/lockIcon.png") no-repeat 10px center;
     padding-left: 28px;
-
 }
 
-
-.buttonLogin{
+.buttonLogin {
     display: flex;
     margin-top: 22px;
     margin-bottom: 11px;
     gap: 25px;
 }
+
 .buttonLogin button {
     font-family: var(--);
     letter-spacing: 3px;
@@ -104,7 +120,6 @@ main {
     cursor: pointer;
 }
 
-
 .esqueceuSenha span a {
     position: relative;
     display: inline-block;
@@ -114,28 +129,32 @@ main {
     cursor: pointer;
 }
 
+
 /* Criando o underline falso */
+
 .esqueceuSenha span a::after {
     content: "";
     position: absolute;
-    bottom: -2px; 
+    bottom: -2px;
     left: 0;
     width: 0;
     height: 2px;
     background-color: #1b1b1b;
-    transition: width 0.3s ease-in-out; 
+    transition: width 0.3s ease-in-out;
 }
 
 .esqueceuSenha span a:hover::after {
     width: 100%;
 }
 
+
 /* container que guarda login e forgot */
+
 .form-container {
     position: relative;
     width: 100%;
-    max-width: 400px;
-    height: 550px; 
+    max-width: auto;
+    height: 700px;
     overflow: hidden;
 }
 
@@ -145,17 +164,14 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     padding: 20px;
     background: transparent;
     transition: transform 0.6s ease;
 }
-
 
 .login-box {
     transform: translateX(0);
@@ -168,6 +184,7 @@ main {
 .form-container.show-forgot .login-box {
     transform: translateX(-100%);
 }
+
 .form-container.show-forgot .forgot-box {
     transform: translateX(0);
 }
@@ -178,19 +195,68 @@ main {
     font-size: 12px;
 }
 
+
 /* criar conta começa escondido embaixo */
+
 .criarConta-box {
-    transform: translateY(100%);
+    /* transform: translateY(100%); */
 }
 
+.criarConta-box .infoUser {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.criarConta-box .cadastrarUser {
+    margin-top: 10px;
+}
+
+.criarConta-box .cadastrarUser button {
+    padding: 10px 130px;
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #000000;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.404);
+    border-radius: 5px;
+}
+
+.criarConta-box .voltarLogin span a {
+    margin-top: 10px;
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    color: #1b1b1b;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.criarConta-box .voltarLogin span a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #1b1b1b;
+    transition: width 0.3s ease-in-out;
+}
+
+.criarConta-box .voltarLogin span a:hover:after {
+    width: 100%;
+}
+
+
 /* quando ativar criar conta */
+
 .form-container.show-criarConta .login-box,
 .form-container.show-criarConta .forgot-box {
-    transform: translateY(-100%); /* sobe e sai da tela */
+    transform: translateY(-100%);
+    /* sobe e sai da tela */
 }
 
 .form-container.show-criarConta .criarConta-box {
-    transform: translateY(0); /* sobe e aparece */
+    transform: translateY(0);
+    /* sobe e aparece */
 }
-
-
