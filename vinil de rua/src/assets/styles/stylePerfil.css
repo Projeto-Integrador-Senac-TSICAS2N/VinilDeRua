@@ -198,15 +198,23 @@ main {
 
 /* criar conta começa escondido embaixo */
 
-.criarConta-box {
-    /* transform: translateY(100%); */
-}
+
+/* .criarConta-box {
+    transform: translateY(100%);
+} */
 
 .criarConta-box .infoUser {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns:x repeat(2, 1fr);
+    gap: 10px;
+    padding: 2px;
+    border: 2px solid red;
+}
+
+.criarConta-box .infoUser input {
+    border-radius: 4px;
+    padding: 16px 70px;
+    border: 2px solid #000000;
 }
 
 .criarConta-box .cadastrarUser {
