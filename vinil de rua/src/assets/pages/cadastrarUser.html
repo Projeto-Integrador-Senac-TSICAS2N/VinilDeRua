@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+    <!-- FONTES USADASS -->
+    <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+    <!-- SEPARAÇÃO -->
+    <link rel="stylesheet" href="/src/assets/styles/stylePerfil.css">
+    <link rel="shortcut icon" type="imagex/png" href="/src/assets/images/logoVinilDeRua.svg">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <img src="https://i.ibb.co/qYwvJYpw/loading.gif" alt="loading" border="0">
+    </div>
+
+    <main>
+        <div class="form-container">
+
+
+            <div class="criarConta-box form-box">
+                <div class="logoPerfil">
+                    <img src="https://i.ibb.co/RknvXKX2/logo-Vinil-De-Rua-preta.png" alt="Logo Vinil de Rua">
+                    <h1>VINIL <br> DE RUA</h1>
+                </div>
+
+                <div class="mensagemErro">
+                    <h1>Seja Bem-vindo(a) ao Vinil de Rua!</h1>
+                </div>
+
+                <div class="infoUser">
+                    <input type="email" placeholder="EMAIL" class="inputEmail" required>
+                    <input type="password" placeholder="SENHA" class="inputSenha" >
+                    <input type="password" placeholder="CONFIRME A SENHA" class="inputSenha">
+                    <input type="number" placeholder="TELEFONE" class="inputTelefone">
+                    <input type="number" placeholder="CEP" class="inputGps">
+                    <input type="text" placeholder="ENDEREÇO" class="inputGps.">
+                    <input type="text" placeholder="COMPLEMENTO" class="inputGps.">
+                    <input type="text" placeholder="CIDADE" class="inputGps.">
+                </div>
+                <input type="text" placeholder="ESTADO" class="inputGps."id="estadoInput">
+                
+                <div class="cadastrarUser">
+                    <button id="cadastrarUser">CADASTRAR</button>
+                </div>
+
+                <div class="voltarLogin">
+                    <span><a href="#" onclick="window.open('/src/assets/pages/perfilUsuario..html', '_self')">Voltar ao login</a></span>
+                </div>
+            </div>
+
+    </main>
+
+
+    <script src="/src/assets/scripts/navbar.js"></script>
+    <script src="/src/assets/scripts/loading.js"></script>
+    <script src="/src/assets/scripts/trocaLogin.js"></script>
+</body>
+
+</html>
