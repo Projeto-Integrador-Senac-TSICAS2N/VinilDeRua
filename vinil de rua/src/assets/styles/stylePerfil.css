@@ -152,7 +152,6 @@ main {
 /* container que guarda login e forgot */
 
 .form-container {
-    position: relative;
     width: 100%;
     max-width: auto;
     height: 900px;
@@ -244,7 +243,6 @@ main {
 
 .criarConta-box .voltarLogin span a {
     margin-top: 10px;
-    position: relative;
     display: inline-block;
     font-size: 18px;
     color: #1b1b1b;
