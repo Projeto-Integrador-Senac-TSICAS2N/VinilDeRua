@@ -133,7 +133,7 @@ header.scrolled .icons img {
 }
 
 .cardTituloCarrinho {
-  
+
   padding-top: 165px;
   display: flex;
 }
@@ -237,6 +237,7 @@ header.scrolled .icons img {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  margin: 0 10px;
 }
 
 
@@ -245,6 +246,20 @@ header.scrolled .icons img {
   justify-content: center;
   align-items: center;
   font-size: 24px;
+}
+
+.inputQtd {
+  width: 48px;
+  height: 34px;
+  border-radius: 6px;
+  border: 2px solid var(--blue);
+  text-align: center;
+  background: #eee;
+}
+
+.inputQtd {
+  display: block;
+  margin: 0 auto;
 }
 
 .infoQuantidade button {
@@ -286,7 +301,7 @@ header.scrolled .icons img {
 }
 
 
-.finalizarCompra{
+.finalizarCompra {
   display: flex;
   margin: 0 310px;
   flex-direction: column;
@@ -296,24 +311,25 @@ header.scrolled .icons img {
   margin-bottom: 50px;
 }
 
-.finalizarCompra h1{
+.finalizarCompra h1 {
   font-size: 22px;
   font-family: var(--fontePrimaria);
 }
-.finalizarCompra p{
+
+.finalizarCompra p {
   font-size: 26px;
   font-weight: bold;
   font-family: var(--fonteNumeros);
 }
 
-.finalizarCompra .totalCompra{
+.finalizarCompra .totalCompra {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
 
-.finalizarButton button{
+.finalizarButton button {
   border-radius: 3px;
   border: 1px solid #000000;
   padding: 2px 12px;
@@ -322,7 +338,8 @@ header.scrolled .icons img {
   cursor: pointer;
   transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
-.finalizarButton button:hover{
+
+.finalizarButton button:hover {
   background-color: #acacac;
   color: #ffffff;
   border: 2.2px solid #ffffff;
