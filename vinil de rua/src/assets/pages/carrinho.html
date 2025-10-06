@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
     <!-- SEPARAÇÃO -->
-    <link rel="stylesheet" href="/src/assets/styles/carrinho.css">
+    <link rel="stylesheet" href="/src/assets/styles/styleCarrinho.css">
     <link rel="shortcut icon" type="imagex/png" href="/src/assets/images/logoVinilDeRua.svg">
 </head>
 
@@ -82,7 +82,7 @@
                             <input type="number" value="2" min="0" class="inputQtd" required>
                         </div>
                     </div>
-                    <div class="info">
+                    <div class="infoPreco">
                         <h1>Preço unitário</h1>
                         <p>R$200,00</p>
                     </div>
@@ -111,7 +111,7 @@
                             <input type="number" value="1" min="0" class="inputQtd" required>
                         </div>
                     </div>
-                    <div class="info">
+                    <div class="infoPreco">
                         <h1>Preço unitário</h1>
                         <p>R$150,00</p>
                     </div>
@@ -140,7 +140,7 @@
                             <input type="number" value="3" min="0" class="inputQtd" required>
                         </div>
                     </div>
-                    <div class="info">
+                    <div class="infoPreco">
                         <h1>Preço unitário</h1>
                         <p>R$250,00</p>
                     </div>
@@ -170,54 +170,68 @@
 
 
         <footer id="contato">
-            <div class="footerContainer">
                 <div class="footerLogo">
                     <img src="https://i.ibb.co/zhNXFH1t/logo-Vinil-De-Rua-branca.png" alt="Vinil de Rua" class="logo">
                     <h1>VINIL <br>DE RUA</h1>
                 </div>
-                <div class="socialConteiner">
-                    <div class="footerCtt">
-                        <h1>Contato</h1>
-                        <hr>
-                        <p>contato@vinilderua.com.br</p>
-                        <p>(11) 11 4002-8922</p>
-                    </div>
-                    <p class="social">Nos siga:</p>
-                    <div class="socialLogo">
-                        <img style="cursor: pointer;" onclick="window.open('https://wa.me/5511945859221', '_blank')"
-                            src="https://i.ibb.co/d0pJB3H5/zapLogo.png" alt="WhatsApp">
-                        <img style="cursor: pointer;"
-                            onclick="window.open('https://www.instagram.com/duudjs_/', '_blank')"
-                            src="https://i.ibb.co/Gv2fVPqD/insta-Logo.png" alt="Instagram">
-                        <img style="cursor: pointer;" onclick="window.open('https://br.pinterest.com/', '_blank')"
-                            src="https://i.ibb.co/BKNqDc8Z/pinterest-Logo.png" alt="Pinterest">
-                        <img style="cursor: pointer;" onclick="window.open('https://www.facebook.com/', '_blank')"
-                            src="https://i.ibb.co/SXZ6bhxx/faceLogo.png" alt="Facebook">
-                    </div>
+                
+                <div class="avisosFooter">
+                    <p>Duvidas? (11) 11 4002-8922 (SP)</p>
+                    <p>Seg a Sex, 9h às 21h Sáb 10h às 18h</p>
+
                 </div>
-                <div class="formasPagamento">
-                    <h1>Formas de pagamento</h1>
-                    <hr>
-                    <div class="formasPagamentoImg">
-                        <a href="https://ibb.co/5gLxyp3k"><img src="https://i.ibb.co/Zpx1P4rS/fiadoPay.png"
-                                alt="fiadoPay"></a>
-                        <a href=""><img src="https://i.ibb.co/PGTbDWv8/applePay.png" alt="applePay"></a>
-                        <a href=""><img src="https://i.ibb.co/j9xwJZxb/google-Pay.png" alt="google-Pay"></a>
-                        <a href=""><img src="https://i.ibb.co/Jw4Fw4Q4/mastercard-Pay.png" alt="mastercard-Pay"></a>
-                        <a href=""><img src="https://i.ibb.co/WpgW73SM/pixPay.png" alt="pixPay" </a>
-                            <a href=""><img src="https://i.ibb.co/RGHkXJks/visaPay.png" alt="visaPay"></a>
-                    </div>
+                <div class="termos">
+                    <a href="">Termos e Condições</a>
                 </div>
-            </div>
-            <div class="copyrightVdR">
-                <p>Copyright © 2025 Vinil de Rua </p>
-            </div>
+                
         </footer>
     </section>
 
     <script src="/src/assets/scripts/navbar.js"></script>
     <script src="/src/assets/scripts/loading.js"></script>
     <script src="/src/assets/scripts/carrinho.js"></script>
+    <script>
+        window.onload = function () {
+            let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+            const divCarrinho = document.getElementsByClassName("itensCarrinho")[0];
+
+
+
+            carrinho.forEach(produto => {
+                let novoProdutoCarrinho = document.createElement("div");
+                novoProdutoCarrinho.classList.add("itemCar");
+                novoProdutoCarrinho.innerHTML = `
+                    <img src="${produto.img}" alt="${produto.titulo}" class="imgCar">
+                    <div class="infoCarrinho">
+                        <div class="info">
+                            <h1>Resumo</h1>
+                            <p>${produto.titulo}</p>
+                            <p>ID: ${produto.id}</p>
+                        </div>
+                        <div class="info">
+                        <h1>Quantidade</h1>
+                        <div class="infoQuantidade">
+                            <input type="number" value="3" min="0" class="inputQtd" required>
+                            </div>
+                        </div>
+                        <div class="infoPreco">
+                            <h1>Preço unitário</h1>
+                            <p>${produto.preco}</p>
+                        </div>
+                        <div class="infoPrecoF">
+                        <h1>Preço final</h1>
+                        <p>R$200,00</p>
+                    </div>
+                </div>
+                <div class="deleteItem" id="deleteItem">
+                    <img src="https://i.ibb.co/Zzdfgwmf/delete.png" alt="">
+                </div>
+                </div>
+                `;
+                divCarrinho.append(novoProdutoCarrinho);
+            });
+        }
+    </script>
 </body>
 
 </html>

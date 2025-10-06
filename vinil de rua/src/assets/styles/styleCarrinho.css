@@ -1,0 +1,472 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+:root {
+  /* fontes */
+  --fontePrimaria: 'Caesar Dressing', cursive;
+  --fonteSecundaria: 'Anton', sans-serif;
+  --fonteTerciaria: "Young Serif", serif;
+  --fonteNumeros: "Sahitya", serif;
+  /* Cores */
+  --gradienteVertical1: linear-gradient(180deg, rgba(191, 191, 191, 1) 0%, rgba(81, 81, 81, 1) 100%);
+  --gradienteVertical2: linear-gradient(180deg, rgba(81, 81, 81, 1) 0%, rgba(191, 191, 191, 1) 100%);
+  --gradienteCardDiscos: linear-gradient(-41deg, rgba(159, 159, 159, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  /* drop shadow discos */
+  --dropShadowDiscos: box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.404);
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+
+header {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  justify-content: space-between;
+  background-color: #7E7E7E;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.404);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+nav {
+  display: flex;
+  gap: 78px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: "Caesar Dressing", system-ui;
+  font-size: 32px;
+  transition: color 0.8 ease-in-out;
+}
+
+header img {
+  width: 87px;
+  height: 87px;
+}
+
+.logoHeader {
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  font-family: "Anton", sans-serif;
+  font-size: 35px;
+  transition: color 0.8 ease-in-out;
+}
+
+.logoHeader a {
+  text-decoration: none;
+}
+
+.logoHeader p {
+  margin-left: 7px;
+}
+
+header .icons img {
+  width: 47px;
+  height: 47px;
+  filter: brightness(0) invert(1);
+  /* deixa branco */
+  transition: filter 0.8 ease-in-out;
+}
+
+.icons {
+  display: flex;
+  gap: 14px;
+}
+
+/* ===== ESTADO APÓS ROLAR ===== */
+header.scrolled {
+  background-color: #FFFFFF;
+  padding: 0 25px;
+}
+
+header.scrolled .logoHeader img {
+  content: url("https://i.ibb.co/RknvXKX2/logo-Vinil-De-Rua-preta.png");
+  width: 87px;
+  height: 87px;
+}
+
+header.scrolled .logoHeader p {
+  color: #000000;
+}
+
+header.scrolled nav a {
+  color: #000000;
+}
+
+header.scrolled .logoHeader img {
+  color: #000000;
+}
+
+header.scrolled .icons img {
+  filter: brightness(0);
+}
+
+/* Parte do carrinho */
+
+.fundoPrincipal {
+  background: var(--gradienteVertical2);
+
+}
+
+.cardTituloCarrinho {
+
+  padding-top: 165px;
+  display: flex;
+}
+
+.tituloCarrinho {
+  padding-left: 125px;
+  padding-right: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 29px;
+  color: #ffffff;
+  background-color: #000000;
+  border-radius: 0 10px 10px 0;
+
+}
+
+
+.infoSituation {
+  font-family: var(--fonteTerciaria);
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoSituation img {
+  width: 50px;
+  height: 50px;
+}
+
+.produtoSituation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #D9D9D9;
+  border-radius: 30px 10px 10px 30px;
+  padding-right: 60px;
+  padding-left: 1px;
+}
+
+.indentificacaoSituation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 60%;
+  background-color: #848484;
+  border-radius: 30px 10px 10px 30px;
+  padding-right: 60px;
+  padding-left: 1px;
+}
+
+.pagamentoSituation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 60%;
+  background-color: #848484;
+  border-radius: 30px 10px 10px 30px;
+  padding-right: 60px;
+  padding-left: 1px;
+}
+
+
+
+
+.itensCarrinho {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 65px;
+  justify-content: center;
+  font-family: var(--fonteTerciaria);
+  margin: 0 220px;
+  padding: 0 160px;
+}
+
+.itemCar {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.itemCar .imgCar {
+  border: 2.5px solid #000000;
+  padding: 8px 5px;
+  border-radius: 0 100px 100px 0;
+}
+
+.itemCar .infoCarrinho {
+  border: 2.5px solid #000000;
+  padding: 15px 34px;
+  display: flex;
+  gap: 40px;
+}
+
+
+
+.itemCar .infoCarrinho .info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0 10px;
+}
+
+
+.infoQuantidade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.inputQtd {
+  width: 48px;
+  height: 34px;
+  border-radius: 6px;
+  border: 2px solid var(--blue);
+  text-align: center;
+  background: #eee;
+}
+
+.inputQtd {
+  display: block;
+  margin: 0 auto;
+}
+
+.infoQuantidade button {
+  border: none;
+
+}
+
+.infoQuantidade .menos button {
+  background-color: #B5B5B5;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.numeroQuant {
+  align-items: center;
+  font-family: var(--fonteNumeros);
+  background-color: #ffffff;
+  padding: 9.1px;
+}
+
+.mais button {
+  color: #FFFFFF;
+  background-color: #000000;
+  padding: 15px;
+  cursor: pointer;
+}
+
+
+.itensCarrinho .deleteItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.itensCarrinho .deleteItem img {
+  width: 47px;
+  height: 47px;
+}
+
+
+.finalizarCompra {
+  display: flex;
+  margin: 0 220px;
+  padding: 0 160px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.finalizarCompra h1 {
+  font-size: 22px;
+  font-family: var(--fontePrimaria);
+}
+
+.finalizarCompra p {
+  font-size: 26px;
+  font-weight: bold;
+  font-family: var(--fonteNumeros);
+}
+
+.finalizarCompra .totalCompra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.finalizarButton button {
+  border-radius: 3px;
+  border: 1px solid #000000;
+  padding: 2px 12px;
+  font-family: var(--fontePrimaria);
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.finalizarButton button:hover {
+  background-color: #acacac;
+  color: #ffffff;
+  border: 2.2px solid #ffffff;
+  transform: scale(1.0);
+  box-shadow: 12px 12px 12px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* separa esquerda e centro */
+  padding: 30px 45px;
+  width: 100%;
+  background-color: #4C4C4C;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+/* logo alinhado à esquerda */
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footerLogo img {
+  width: 88px;
+  height: 88px;
+}
+
+.footerLogo h1 {
+  font-family: var(--fonteSecundaria);
+  font-size: 24px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  line-height: 35px;
+  display: flex;
+  align-items: end;
+}
+
+.avisosFooter {
+  position: absolute; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-family: var(--fonteTerciaria);
+  font-size: 22px;
+}
+
+.termos a {
+  margin-top: 20px;
+  text-decoration: underline;
+  font-family: var(--fonteTerciaria);
+  color: #ffffffff;
+  font-size: 22px;
+  position: absolute; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+
+
+.socialConteiner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: var(--fonteTerciaria);
+  margin-right: 335px;
+}
+
+.socialConteiner hr {
+  margin-top: 16px;
+  margin-bottom: 11px;
+}
+
+
+.social {
+  font-size: 24px;
+  margin-top: 23px;
+  margin-bottom: 15px;
+}
+
+
+.socialLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.socialLogo img {
+  max-width: 30px;
+}
+
+.copyrightVdR {
+  display: flex;
+  justify-content: center;
+  font-family: var(--fonteTerciaria);
+  font-size: 24px;
+  margin-top: 90px;
+}
+
+.footerCtt h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.formasPagamento hr {
+  margin-top: 16px;
+  margin-bottom: 11px;
+}
+
+.formasPagamentoImg {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
