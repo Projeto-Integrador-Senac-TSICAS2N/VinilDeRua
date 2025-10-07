@@ -354,7 +354,7 @@ header.scrolled .icons img {
 footer {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* separa esquerda e centro */
+  justify-content: space-between; 
   padding: 30px 45px;
   width: 100%;
   background-color: #4C4C4C;
@@ -362,7 +362,6 @@ footer {
   border-radius: 10px 10px 0 0;
 }
 
-/* logo alinhado à esquerda */
 .footerLogo {
   display: flex;
   align-items: center;
