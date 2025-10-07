@@ -1,4 +1,4 @@
-document.querySelectorAll('.product-images img').forEach(img => {
+document.querySelectorAll('.imgProduto img').forEach(img => {
   img.addEventListener('click', function() {
     // Cria o overlay
     const overlay = document.createElement('div');

@@ -210,11 +210,6 @@ main {
     padding: 5px;
 }
 
-.criarConta-box #estadoInput{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .criarConta-box input{
     border-radius: 4px;
