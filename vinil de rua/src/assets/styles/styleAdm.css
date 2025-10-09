@@ -1,4 +1,5 @@
 /* RESET GERAL */
+
 * {
     margin: 0;
     padding: 0;
@@ -32,15 +33,17 @@
 }
 
 
-
 /* --- Estrutura geral --- */
+
 .painelAdmin {
     display: flex;
     height: 100vh;
     background-color: #f4f4f4;
 }
 
+
 /* --- Menu lateral --- */
+
 .menuLateral {
     width: 240px;
     background-color: #fff;
@@ -49,6 +52,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 20px 10px;
+    font-family: var(--fonteTerciaria);
 }
 
 .areaLogo {
@@ -57,6 +61,8 @@
     align-items: center;
     text-align: center;
     gap: 10px;
+    font-family: var(--fonteSecundaria);
+    font-weight: 100;
 }
 
 .areaLogo img {
@@ -68,6 +74,12 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.menuPrincipal button {
+    font-weight: normal;
+    font-size: 20px;
+    font-family: var(--fonteTerciaria);
 }
 
 .itemMenu {
@@ -94,8 +106,8 @@
     padding: 10px;
 }
 
-.menuCategorias h3 {
-    font-size: 1rem;
+.menuCategorias h1 {
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
@@ -119,14 +131,18 @@
     background-color: #eee;
 }
 
+
 /* --- Conteúdo principal --- */
+
 .conteudoPrincipal {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
+
 /* --- Menu superior --- */
+
 .menuSuperior {
     height: 60px;
     background: #fff;
@@ -145,12 +161,13 @@
 
 .campoBusca input {
     padding: 6px 10px;
+    font-size: 20px;
     border: 1px solid #ccc;
     border-radius: 6px;
     outline: none;
 }
 
-.btnBusca {
+.btnBusca button {
     background: #000;
     color: #fff;
     border: none;
@@ -158,10 +175,13 @@
     padding: 6px 10px;
     cursor: pointer;
     transition: 0.2s;
+    font-size: 18px;
 }
 
-.btnBusca:hover {
-    background: #333;
+.btnBusca button:hover {
+    border-radius: 6px;
+    background: #adadad;
+    color: #313131;
 }
 
 .areaUsuario i {
@@ -169,7 +189,9 @@
     cursor: pointer;
 }
 
-/* --- Seção de produtos --- */
+
+/* Seção de produtos */
+
 .secaoProdutos {
     flex: 1;
     padding: 30px;
@@ -187,16 +209,19 @@
     font-weight: bold;
 }
 
+
 /* --- Grade e cards --- */
+
 .gradeProdutos {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 25px;
 }
 
 .cardProduto {
     display: flex;
-    width: 255px;
+    width: auto;
     height: auto;
     background: #fff;
     border: 2px solid #000;
@@ -206,15 +231,16 @@
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.cardProduto .nomeEPrecoProduto {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .cardProduto:hover {
     transform: scale(1.03);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.cardProduto img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
 }
 
 .precoProduto {
