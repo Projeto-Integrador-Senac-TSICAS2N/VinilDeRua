@@ -1,0 +1,241 @@
+/* RESET GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* fontes */
+    --fontePrimaria: 'Caesar Dressing', cursive;
+    --fonteSecundaria: 'Anton', sans-serif;
+    --fonteTerciaria: "Young Serif", serif;
+    /* Cores */
+    --gradienteVertical1: linear-gradient(180deg, rgba(191, 191, 191, 1) 0%, rgba(81, 81, 81, 1) 100%);
+    --gradienteVertical2: linear-gradient(180deg, rgba(81, 81, 81, 1) 0%, rgba(191, 191, 191, 1) 100%);
+    --gradienteCardDiscos: linear-gradient(-41deg, rgba(159, 159, 159, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    /* drop shadow discos */
+    --dropShadowDiscos: box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.404);
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+
+
+/* --- Estrutura geral --- */
+.painelAdmin {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* --- Menu lateral --- */
+.menuLateral {
+    width: 240px;
+    background-color: #fff;
+    border-right: 2px solid #cfcfcf;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+
+.areaLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.areaLogo img {
+    width: 60px;
+    height: 60px;
+}
+
+.menuPrincipal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.itemMenu {
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.itemMenu:hover {
+    background-color: #f0f0f0;
+}
+
+.itemMenu.ativo {
+    background-color: #000;
+    color: #fff;
+}
+
+.menuCategorias {
+    padding: 10px;
+}
+
+.menuCategorias h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.menuCategorias ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menuCategorias li {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.menuCategorias li:hover {
+    background-color: #eee;
+}
+
+/* --- Conteúdo principal --- */
+.conteudoPrincipal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Menu superior --- */
+.menuSuperior {
+    height: 60px;
+    background: #fff;
+    border-bottom: 2px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.campoBusca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.campoBusca input {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+.btnBusca {
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btnBusca:hover {
+    background: #333;
+}
+
+.areaUsuario i {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* --- Seção de produtos --- */
+.secaoProdutos {
+    flex: 1;
+    padding: 30px;
+    background: linear-gradient(#bdbdbd, #e3e3e3);
+    overflow-y: auto;
+}
+
+.tituloSecao {
+    text-align: center;
+    margin-bottom: 25px;
+    background: #d1d1d1;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* --- Grade e cards --- */
+.gradeProdutos {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.cardProduto {
+    display: flex;
+    width: 255px;
+    height: auto;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cardProduto:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cardProduto img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.precoProduto {
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.acoesProduto {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.acoesProduto button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.acoesProduto button:hover {
+    transform: scale(1.2);
+}
