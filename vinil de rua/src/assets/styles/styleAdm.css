@@ -97,9 +97,12 @@
     background-color: #f0f0f0;
 }
 
-.itemMenu.ativo {
+.itemMenuAtivo {
     background-color: #000;
     color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: start;
 }
 
 .menuCategorias {
@@ -231,7 +234,7 @@
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.cardProduto .nomeEPrecoProduto {
+.cardProduto .infosProduto {
     margin-left: 20px;
     display: flex;
     flex-direction: column;
