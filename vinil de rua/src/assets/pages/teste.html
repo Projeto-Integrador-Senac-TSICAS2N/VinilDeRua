@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Upload de Foto (arrastar ou escolher)</title>
+  <style>
+    body { font-family: Inter, system-ui, Arial; padding: 24px; background:#f5f6f8; color:#111; }
+    .upload-area {
+      width: 420px;
+      max-width: 100%;
+      margin: 0 auto;
+      border: 2px dashed #c7cbd1;
+      border-radius: 10px;
+      background: #fff;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      transition: border-color .15s, background .15s;
+    }
+    .upload-area.dragover { border-color: #3b82f6; background: #f0f6ff; }
+    .upload-hint { text-align:center; font-size:14px; color:#475569; }
+    .choose-btn {
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:8px;
+      border: none;
+      background:#111827;
+      color:#fff;
+      cursor:pointer;
+      font-size:14px;
+    }
+    input[type="file"] { display:none; }
+    .preview {
+      width: 100%;
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:center;
+      padding: 8px 0;
+    }
+    .thumb {
+      width: 140px;
+      height: 140px;
+      border-radius:8px;
+      background-size:cover;
+      background-position:center;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+      border: 1px solid #e6e9ef;
+      position: relative;
+    }
+    .thumb-info { flex:1; min-width:0; }
+    .meta { font-size:13px; color:#334155; word-break:break-all; }
+    .actions { margin-top:8px; display:flex; gap:8px; }
+    .btn { padding:6px 10px; border-radius:8px; border:1px solid #e6e9ef; background:#fff; cursor:pointer; font-size:13px; }
+    .btn.danger { border-color:#fca5a5; background:#fff5f5; }
+    .error { color:#b91c1c; font-size:13px; margin-top:6px; text-align:center; }
+    .sr-only { position: absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center">Enviar foto de usuário</h2>
+
+  <form id="uploadForm" class="upload-area" action="/upload" method="POST" enctype="multipart/form-data">
+    <label for="fileInput" class="sr-only">Selecionar imagem</label>
+
+    <div id="dropZone" aria-describedby="hint" tabindex="0">
+      <p class="upload-hint" id="hint">
+        Arraste e solte a foto aqui <br>ou
+        <button type="button" id="chooseBtn" class="choose-btn">Escolher do computador</button>
+      </p>
+      <input id="fileInput" name="photo" type="file" accept="image/*">
+    </div>
+
+    <div class="preview" id="previewArea" style="display:none;">
+      <div class="thumb" id="thumb"></div>
+      <div class="thumb-info">
+        <div class="meta" id="fileMeta"></div>
+        <div class="actions">
+          <button type="button" class="btn" id="changeBtn">Trocar foto</button>
+          <button type="button" class="btn danger" id="removeBtn">Remover</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="width:100%; display:flex; justify-content:center; margin-top:8px;">
+      <button type="submit" class="choose-btn" id="submitBtn">Salvar</button>
+    </div>
+
+    <div class="error" id="errorMsg" role="alert" aria-live="polite" style="display:none;"></div>
+  </form>
+
+<script>
+  // Configurações
+  const MAX_SIZE_BYTES = 5 * 1024 * 1024; // 5MB
+
+  // Elementos
+  const fileInput = document.getElementById('fileInput');
+  const dropZone = document.getElementById('dropZone');
+  const chooseBtn = document.getElementById('chooseBtn');
+  const previewArea = document.getElementById('previewArea');
+  const thumb = document.getElementById('thumb');
+  const fileMeta = document.getElementById('fileMeta');
+  const changeBtn = document.getElementById('changeBtn');
+  const removeBtn = document.getElementById('removeBtn');
+  const errorMsg = document.getElementById('errorMsg');
+  const uploadForm = document.getElementById('uploadForm');
+
+  // Abertura do seletor
+  chooseBtn.addEventListener('click', () => fileInput.click());
+  changeBtn.addEventListener('click', () => fileInput.click());
+  removeBtn.addEventListener('click', removeFile);
+
+  // Input change
+  fileInput.addEventListener('change', (e) => {
+    const f = e.target.files && e.target.files[0];
+    handleFile(f);
+  });
+
+  // Drag & Drop events (com prevenção do comportamento padrão)
+  ['dragenter','dragover','dragleave','drop'].forEach(evt =>
+    dropZone.addEventListener(evt, (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    })
+  );
+
+  dropZone.addEventListener('dragover', () => dropZone.classList.add('dragover'));
+  dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+  dropZone.addEventListener('drop', (e) => {
+    dropZone.classList.remove('dragover');
+    const dt = e.dataTransfer;
+    if (!dt) return;
+    const f = dt.files && dt.files[0];
+    handleFile(f);
+  });
+
+  // Keyboard accessibilty: permitir "Enter" ou "Space" para abrir seletor
+  dropZone.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      fileInput.click();
+    }
+  });
+
+  function handleFile(file) {
+    clearError();
+    if (!file) return;
+
+    // Validações básicas
+    if (!file.type.startsWith('image/')) {
+      showError('Tipo inválido. Envie apenas imagens (jpg, png, webp, etc).');
+      fileInput.value = '';
+      return;
+    }
+    if (file.size > MAX_SIZE_BYTES) {
+      showError('Arquivo muito grande. Máx. 5 MB.');
+      fileInput.value = '';
+      return;
+    }
+
+    // Mostrar preview (URL temporária)
+    const url = URL.createObjectURL(file);
+    thumb.style.backgroundImage = `url(${url})`;
+    previewArea.style.display = 'flex';
+    fileMeta.innerText = `${file.name} • ${(file.size/1024/1024).toFixed(2)} MB • ${file.type}`;
+    // armazenar para envio (o input já tem o arquivo) — form submit seguirá padrão multipart/form-data
+  }
+
+  function removeFile() {
+    // limpa preview e input
+    thumb.style.backgroundImage = '';
+    previewArea.style.display = 'none';
+    fileInput.value = '';
+    clearError();
+  }
+
+  function showError(msg) {
+    errorMsg.style.display = 'block';
+    errorMsg.innerText = msg;
+  }
+  function clearError() {
+    errorMsg.style.display = 'none';
+    errorMsg.innerText = '';
+  }
+
+  // Prevendo envio do form (opcional): aqui você pode fazer um envio via fetch/XHR se quiser
+  uploadForm.addEventListener('submit', (e) => {
+    // se quiser tratar via fetch em vez do envio normal, descomente:
+    // e.preventDefault();
+    // enviarFormComFetch();
+    // por enquanto, deixa o comportamento padrão (POST para /upload)
+  });
+
+  // Exemplo de envio via fetch (caso queira usar):
+  async function enviarFormComFetch() {
+    const f = fileInput.files[0];
+    if (!f) { showError('Selecione uma imagem antes de enviar.'); return; }
+    const fd = new FormData();
+    fd.append('photo', f);
+    try {
+      const resp = await fetch('/upload', {
+        method: 'POST',
+        body: fd
+      });
+      if (!resp.ok) throw new Error('Erro ao enviar');
+      const data = await resp.json();
+      alert('Enviado com sucesso');
+      // lidar com resposta
+    } catch (err) {
+      showError('Falha no envio: ' + err.message);
+    }
+  }
+</script>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADM Page</title>
+    <!-- FONTES USADASS -->
+    <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+    <!-- SEPARAÇÃO -->
+    <link rel="stylesheet" href="/src/assets/styles/styleAdm.css">
+    <link rel="shortcut icon" type="imagex/png" href="/src/assets/images/logoVinilDeRua.svg">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <img src="https://i.ibb.co/qYwvJYpw/loading.gif" alt="loading" border="0">
+    </div>
+
+    <div class="painelAdmin">
+
+        <!-- MENU LATERAL -->
+        <aside class="menuLateral">
+            <div class="areaLogo">
+                <img src="https://i.ibb.co/RknvXKX2/logo-Vinil-De-Rua-preta.png" alt="Logo Vinil de Rua">
+                <h1>Vinil de Rua</h1>
+            </div>
+
+            <nav class="menuPrincipal"> 
+                <button class="itemMenu" onclick="window.open('/src/assets/pages/admPageTProdutos.html' , '_self')">Todos os produtos</button>
+                <button class="itemMenu" onclick="window.open('/src/assets/pages/admPageDashboard.html', '_self')">Dashboard</button>
+                <button class="itemMenu" onclick="window.open('/src/assets/pages/admPageAddP.html' , '_self')">Adicionar Produto</button>
+                <button class="itemMenu" onclick="window.open('/src/assets/pages/admPageRemoveP.html' , '_self')">Deletar Produto</button>
+                <button class="itemMenuAtivo" onclick="window.open('/src/assets/pages/admPageNotificacao.html' , '_self')">Notificações</button>
+            </nav>
+
+            <div class="menuCategorias">
+                <h1>Categorias</h1>
+                <ul>
+                    <li><span>Grime</span><span>8</span></li>
+                    <li><span>Drill</span><span>8</span></li>
+                    <li><span>R&B</span><span>8</span></li>
+                    <li><span>90’s - Y2K</span><span>8</span></li>
+                    <li><span>Boombap</span><span>8</span></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="conteudoPrincipal">
+
+            <!-- MENU SUPERIOR -->
+            <header class="menuSuperior">
+                <div class="campoBusca">
+                    <input type="text" placeholder="Buscar produto...">
+                    <div class="btnBusca">
+                        <button>Buscar</button>
+                    </div>
+                </div>
+
+                <div class="areaUsuario">
+                    <i class="icon-user">
+                        <img src="https://i.ibb.co/v6qZmTGv/perfil-Icon.png" alt="">
+                    </i>
+                </div>
+            </header>
+
+            <!-- SEÇÃO DE NOTFICAÇÃO  -->
+            <section class="secaoNotificacao">
+                <h2 class="tituloSecao">Novos usuários</h2>
+
+                <div class="gradeNotificacao">
+                    <div class="cardNotificacao">
+                        <div class="infosNotificacao">
+                            <h1>Essa semana:</h1>
+                            <p>9 novos usuários registrados</p>
+                            <p>2 deles fizeram a sua primeira compra</p>
+                        </div>
+                    </div>
+
+                    <div class="cardNotificacao">
+                        <div class="infosNotificacao">
+                            <h1>Semana passada: </h1>
+                            <p>5 novos usuários registrados</p>
+                            <p>1 deles fizeram a sua primeira compra</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+                <h2 class="tituloSecao">Saídas</h2>
+
+                <div class="gradeNotificacao">
+                    <div class="cardNotificacao">
+                        <div class="infosNotificacao">
+                            <h1>Essa semana:</h1>
+                            <p>15 discos vendidos</p>
+                            <h1>Categoria mais vendida:</h1>
+                            <p>Drill</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="tituloSecao">Se esgotando</h2>
+
+                <div class="gradeNotificacao">
+                    <div class="cardNotificacao">
+                        <div class="infosNotificacao">
+                            <h1>Essa semana:</h1>
+                            <p>2 produtos em falta</p>
+                            <h1>Perto de acabar:</h1>
+                            <p>Melt my Eyez see your futere - Denzel Curry</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+            </section>
+        </main>
+    </div>
+    <script src="/src/assets/scripts/loading.js"></script>
+</body>
+
+</html>
