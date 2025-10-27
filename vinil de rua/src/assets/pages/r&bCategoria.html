@@ -17,6 +17,7 @@
 
 </head>
 
+
 <body>
 
     <div id="preloader">
@@ -72,7 +73,12 @@
                 </div>
                 <div class="preçoEFavDisco">
                     <button class="btnComprarAgora"
-                        onclick="window.open('src/assets/pages/teladecompra.html', '_blank')">Comprar
+                        onclick="selecionarProduto({
+    id: 1, // incrementar ID para cada produto
+    titulo: 'Nome do álbum aqui',
+    img: 'URL da imagem aqui',
+    preco: 200 // preço do produto
+})">Comprar
                         agora</button>
                     <div class="cart">
                         <button class="addCarrinho">

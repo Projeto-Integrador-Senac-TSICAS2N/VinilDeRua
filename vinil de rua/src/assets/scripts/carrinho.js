@@ -85,5 +85,3 @@ function atualizarPreco() {
     precoTotal = precoTotal.replace(".", ",");
     document.getElementsByClassName("resultadoFinal")[0].innerText = "R$" + precoTotal;
 }
-
-
