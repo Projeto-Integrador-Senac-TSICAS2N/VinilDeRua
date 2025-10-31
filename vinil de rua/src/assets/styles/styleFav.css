@@ -194,6 +194,110 @@ main {
 
 }
 
+.cardsFav{
+  padding-top: 150px;
+  display: grid;
+  grid-template-columns: repeat(4, 224px);
+  gap: 42px;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  border: 2px solid red;
+}
+
+
+.cardDisco {
+  width: 224px;
+  height: 253px;
+  background: var(--gradienteCardDiscos);
+  font-family: var(--fontePrimaria);
+  border-radius: 5px;
+  padding: 0px 7px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.cardDisco:hover {
+  transform: scale(1.03);
+}
+
+.cardDisco .imgCard {
+  cursor: pointer;
+  padding-top: 6px;
+  padding-left: 7px;
+  padding-right: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardDisco .imgCard>img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.infoDisco {
+  font-size: 15px;
+  padding-bottom: 20px;
+}
+
+.infoDisco .precoDisco {
+  padding-top: 4px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+.preçoEFavDisco {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.preçoEFavDisco button {
+  border-radius: 3px;
+  border: 1px solid #000000;
+  padding: 2px 12px;
+  font-family: var(--fontePrimaria);
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.preçoEFavDisco button:hover {
+  background-color: #acacac;
+  color: #ffffff;
+  border: 2.2px solid #ffffff;
+  transform: scale(1.0);
+  box-shadow: 12px 12px 12px 2px rgba(0, 0, 0, 0.2);
+}
+
+.preçoEFavDisco .favorite img {
+  width: 20px;
+  height: 20px;
+  transition: color 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.preçoEFavDisco .cart img {
+  width: 20px;
+  height: 20px;
+  transition: color 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.preçoEFavDisco .favorite img:hover {
+  content: url("https://i.ibb.co/9HR1wYgm/desfavoritar.png");
+}
+
+.preçoEFavDisco .cart img:hover {
+  content: url("https://i.ibb.co/DPg9f9c3/add-shopping-cart-3.png");
+}
+
 
 
 
