@@ -115,3 +115,80 @@ window.onload = async function() {
 };
 
 
+
+// ========================================================
+// Exibir produto selecionado + player Spotify dinâmico
+// ========================================================
+
+// Função para buscar álbum no Spotify
+async function buscarAlbumSpotify(nomeAlbum) {
+    const token = 'SEU_ACCESS_TOKEN_AQUI'; // 🔑 Gere com o script Bash
+    const res = await fetch(
+        `https://api.spotify.com/v1/search?q=${encodeURIComponent(nomeAlbum)}&type=album&limit=1`,
+        { headers: { Authorization: `Bearer ${token}` } }
+    );
+    const data = await res.json();
+    return data.albums?.items[0];
+}
+
+// Função para atualizar o iframe com o álbum encontrado
+async function atualizarEmbedSpotify(nomeAlbum) {
+    const album = await buscarAlbumSpotify(nomeAlbum);
+    const iframe = document.querySelector('.tracklist iframe');
+
+    if (album) {
+        // Substitui o SRC do iframe com o ID do álbum encontrado
+        iframe.src = `https://open.spotify.com/embed/album/${album.id}?utm_source=generator&theme=0`;
+    } else {
+        // Se não encontrar o álbum
+        iframe.outerHTML = `<p style="color: #888;">Álbum não encontrado no Spotify 🎧</p>`;
+    }
+}
+
+// Quando a página carregar...
+window.onload = async function() {
+    // Recuperar produto do localStorage
+    const produtoSelecionado = JSON.parse(localStorage.getItem("produtoSelecionado"));
+
+    if (produtoSelecionado) {
+        // Atualizar imagem principal
+        const img = document.querySelector('.imgProduto > img');
+        if (img) img.src = produtoSelecionado.img;
+
+        // Atualizar título
+        document.querySelector('.nomeProduto h1').textContent = produtoSelecionado.titulo;
+
+        // Atualizar preço
+        document.querySelector('.finalizarCompra p').textContent = 
+            `R$ ${produtoSelecionado.preco.toFixed(2)}`;
+
+        // 🎧 Atualizar o player Spotify com base no nome do produto
+        await atualizarEmbedSpotify(produtoSelecionado.titulo);
+    }
+};
+
+// Função para comprar
+function comprarAgora() {
+    const produtoSelecionado = JSON.parse(localStorage.getItem("produtoSelecionado"));
+
+    // Adicionar ao carrinho
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+    carrinho.push(produtoSelecionado);
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+    alert('Produto adicionado ao carrinho!');
+    window.location.href = '/src/assets/pages/carrinho.html';
+}
+
+// Função do catálogo (para referência)
+function selecionarProduto(produto) {
+    localStorage.setItem("produtoSelecionado", JSON.stringify({
+        id: produto.id,
+        titulo: produto.titulo,
+        img: produto.img,
+        preco: produto.preco,
+    }));
+
+    window.location.href = '/src/assets/pages/teladecompra.html';
+}
+
