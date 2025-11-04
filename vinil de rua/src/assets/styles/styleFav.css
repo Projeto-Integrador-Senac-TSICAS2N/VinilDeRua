@@ -206,21 +206,42 @@ main {
 
 
 .cardDisco {
-  width: 224px;
-  height: 253px;
+  width: auto;
+  height: auto;
+  border: 2px solid blue;
   background: var(--gradienteCardDiscos);
   font-family: var(--fontePrimaria);
   border-radius: 5px;
   padding: 0px 7px;
   overflow: hidden;
+  position: relative; /* necessário para posicionar o pseudo-elemento */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.2s ease;
+
 }
 
 .cardDisco:hover {
   transform: scale(1.03);
+}
+
+.cardDisco > * {
+  position: relative;
+  z-index: 2;
+}
+
+.cardDisco:hover::before {
+  content: "";
+  position: absolute;
+  inset: 0; 
+  background-image: url('https://i.ibb.co/d0rJhrVW/vinyl-hearth.png');
+  background-repeat: repeat;
+  background-position: center;
+  background-size: calc(10% * 0.75);
+  opacity: 0.2; /* 20% de opacidade apenas para a imagem */
+  pointer-events: none; /* não interfere em cliques */
+  z-index: 1;
 }
 
 .cardDisco .imgCard {
