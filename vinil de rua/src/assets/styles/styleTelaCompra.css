@@ -200,8 +200,9 @@ header.scrolled .icons img {
   display: flex;
   justify-content: center;
   gap: 50px;
-  margin: 0 180px;
+  margin:  100px;
   padding: 150px;
+  border: 2px solid red;
 }
 
 .infosProduto {
