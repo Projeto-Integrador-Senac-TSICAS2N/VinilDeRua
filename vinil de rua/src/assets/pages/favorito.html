@@ -50,16 +50,19 @@
         <section class="cardsFav">
 
             <div class="cardDisco">
-                <img src="https://i.ibb.co/jZq6YsFN/amlLP.png"
-                alt="Capa do  álbum Awaken, my love - Childish Gambino" class="imgCard">
+                <img src="https://i.ibb.co/jZq6YsFN/amlLP.png" alt="Capa do  álbum Awaken, my love - Childish Gambino"
+                    class="imgCard">
                 <div class="infoDisco">
                     <p class="nomeDisco">Awaken, my love - Childish Gambino</p>
-                    <p class="precoDisco">R$ 130</p>
+                    <p class="precoDisco">R$ 275</p>
                 </div>
                 <div class="preçoEFavDisco">
-                    <button class="btnComprarAgora"
-                    onclick="window.open('src/assets/pages/teladecompra.html', '_blank')">Comprar
-                    agora</button>
+                    <button class="btnComprarAgora" onclick="selecionarProduto({
+                        id: 1,
+                        titulo: 'Awaken, my love - Childish Gambino',
+                        img: 'https://i.ibb.co/jZq6YsFN/amlLP.png',
+                        preco: 275
+                    })">Comprar agora</button>
                     <div class="cart">
                         <button class="addCarrinho">
                             <img src="https://i.ibb.co/6RFY694G/add-shopping-cart-1.png" alt="carrinho">
@@ -72,54 +75,80 @@
                     </div>
                 </div>
             </div>
-            
-            
+
+            <div class="cardDisco">
+                <img src="https://i.ibb.co/Y76DP3Hw/bbgLP.png" alt="Capa do  álbum Babylon by Gus Vol 1 Black Alien"
+                    class="imgCard">
+                <div class="infoDisco">
+                    <p class="nomeDisco">Babylon by Gus Vol 1 Black Alien</p>
+                    <p class="precoDisco">R$ 195</p>
+                </div>
+                <div class="preçoEFavDisco">
+                    <button class="btnComprarAgora" onclick="selecionarProduto({
+                        id: 2,
+                        titulo: 'Babylon by Gus Vol 1 Black Alien',
+                        img: 'https://i.ibb.co/Y76DP3Hw/bbgLP.png',
+                        preco: 195
+                    })">Comprar agora</button>
+                    <div class="cart">
+                        <button class="addCarrinho">
+                            <img src="https://i.ibb.co/6RFY694G/add-shopping-cart-1.png" alt="carrinho">
+                        </button>
+                    </div>
+                    <div class="favorite">
+                        <a href="/src/assets/pages/favorito.html">
+                            <img src="https://i.ibb.co/5mHR0sq/favorite-Black.png" alt="favorito">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardDisco">
+                <img src="https://i.ibb.co/NdcpKSM9/eu-Mermo-Vinyl.png" alt="Capa do álbum Mixtape eu Mermo - Derxan"
+                    class="imgCard">
+                <div class="infoDisco">
+                    <p class="nomeDisco">Mixtape eu Mermo - Derxan</p>
+                    <p class="precoDisco">R$ 75</p>
+                </div>
+                <div class="preçoEFavDisco">
+                    <button class="btnComprarAgora" onclick="selecionarProduto({
+                        id: 3,
+                        titulo: 'Mixtape eu Mermo - Derxan',
+                        img: 'https://i.ibb.co/NdcpKSM9/eu-Mermo-Vinyl.png',
+                        preco: 75
+                    })">Comprar agora</button>
+                    <div class="cart">
+                        <button class="addCarrinho">
+                            <img src="https://i.ibb.co/6RFY694G/add-shopping-cart-1.png" alt="carrinho">
+                        </button>
+                    </div>
+                    <div class="favorite">
+                        <a href="/src/assets/pages/favorito.html">
+                            <img src="https://i.ibb.co/5mHR0sq/favorite-Black.png" alt="favorito">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
-            
-            <footer id="contato">
-            <div class="footerContainer">
-                <div class="footerLogo">
-                    <img src="https://i.ibb.co/zhNXFH1t/logo-Vinil-De-Rua-branca.png" alt="Vinil de Rua" class="logo">
-                    <h1>VINIL <br>DE RUA</h1>
-                </div>
-                <div class="socialConteiner">
-                    <div class="footerCtt">
-                        <h1>Contato</h1>
-                        <hr>
-                        <p>contato@vinilderua.com.br</p>
-                        <p>(11) 11 4002-8922</p>
-                    </div>
-                    <p class="social">Nos siga:</p>
-                    <div class="socialLogo">
-                        <img style="cursor: pointer;" onclick="window.open('https://wa.me/5511945859221', '_blank')"
-                            src="https://i.ibb.co/d0pJB3H5/zapLogo.png" alt="WhatsApp">
-                        <img style="cursor: pointer;"
-                            onclick="window.open('https://www.instagram.com/duudjs_/', '_blank')"
-                            src="https://i.ibb.co/Gv2fVPqD/insta-Logo.png" alt="Instagram">
-                        <img style="cursor: pointer;" onclick="window.open('https://br.pinterest.com/', '_blank')"
-                            src="https://i.ibb.co/BKNqDc8Z/pinterest-Logo.png" alt="Pinterest">
-                        <img style="cursor: pointer;" onclick="window.open('https://www.facebook.com/', '_blank')"
-                            src="https://i.ibb.co/SXZ6bhxx/faceLogo.png" alt="Facebook">
-                    </div>
-                </div>
-                <div class="formasPagamento">
-                    <h1>Formas de pagamento</h1>
-                    <hr>
-                    <div class="formasPagamentoImg">
-                        <a href="https://ibb.co/5gLxyp3k"><img src="https://i.ibb.co/Zpx1P4rS/fiadoPay.png"
-                                alt="fiadoPay"></a>
-                        <a href=""><img src="https://i.ibb.co/PGTbDWv8/applePay.png" alt="applePay"></a>
-                        <a href=""><img src="https://i.ibb.co/j9xwJZxb/google-Pay.png" alt="google-Pay"></a>
-                        <a href=""><img src="https://i.ibb.co/Jw4Fw4Q4/mastercard-Pay.png" alt="mastercard-Pay"></a>
-                        <a href=""><img src="https://i.ibb.co/WpgW73SM/pixPay.png" alt="pixPay" </a>
-                            <a href=""><img src="https://i.ibb.co/RGHkXJks/visaPay.png" alt="visaPay"></a>
-                    </div>
-                </div>
+        
+        <footer id="contato">
+            <div class="footerLogo">
+                <img src="https://i.ibb.co/zhNXFH1t/logo-Vinil-De-Rua-branca.png" alt="Vinil de Rua" class="logo">
+                <h1>VINIL <br>DE RUA</h1>
             </div>
-            <div class="copyrightVdR">
-                <p>Copyright © 2025 Vinil de Rua </p>
+
+            <div class="avisosFooter">
+                <p>Duvidas? (11) 4002-8922 (SP)</p>
+                <p>Seg a Sex, 9h às 21h Sáb 10h às 18h</p>
+
             </div>
+            <div class="termos">
+                <a href="">Termos e Condições</a>
+            </div>
+
         </footer>
+
+
     </section>
 
     <script src="/src/assets/scripts/navbar.js"></script>

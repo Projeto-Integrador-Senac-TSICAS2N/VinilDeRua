@@ -14,12 +14,14 @@
   --gradienteVertical1: linear-gradient(180deg, rgba(191, 191, 191, 1) 0%, rgba(81, 81, 81, 1) 100%);
   --gradienteVertical2: linear-gradient(180deg, rgba(81, 81, 81, 1) 0%, rgba(191, 191, 191, 1) 100%);
   --gradienteCardDiscos: linear-gradient(-41deg, rgba(159, 159, 159, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  --pretoFosco: #1f1717cc;
   /* drop shadow discos */
   --dropShadowDiscos: box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.404);
 }
 
 #preloader {
   position: fixed;
+  color: #3b3b3b91;
   top: 0;
   left: 0;
   width: 100vw;
@@ -44,7 +46,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1000; 
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -195,9 +197,10 @@ main {
 }
 
 .cardsFav{
-  padding-top: 150px;
+  padding: 150px;
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(4, 224px);
+  grid-template-columns: repeat(4, auto);
   gap: 42px;
   font-family: Arial, sans-serif;
   justify-content: center;
@@ -207,14 +210,14 @@ main {
 
 .cardDisco {
   width: auto;
-  height: auto;
-  border: 2px solid blue;
+  height: 270px ;
+  border: 5px solid var(--pretoFosco);
   background: var(--gradienteCardDiscos);
   font-family: var(--fontePrimaria);
   border-radius: 5px;
   padding: 0px 7px;
   overflow: hidden;
-  position: relative; /* necessário para posicionar o pseudo-elemento */
+  position: relative; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -315,9 +318,7 @@ main {
   content: url("https://i.ibb.co/9HR1wYgm/desfavoritar.png");
 }
 
-.preçoEFavDisco .cart img:hover {
-  content: url("https://i.ibb.co/DPg9f9c3/add-shopping-cart-3.png");
-}
+
 
 
 
@@ -330,92 +331,60 @@ main {
 
 
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 45px;
+  width: 100%;
   background-color: #4C4C4C;
   color: white;
-  padding: 30px;
-  border-radius: 30px 30px 0px 0px;
-
-}
-
-.footerContainer {
-  display: flex;
-  justify-content: space-between;
-  justify-content: center;
-  justify-content: flex-start;
-  gap: 238px;
-}
-
-.footerLogo img {
-  width: 117px;
-  height: 117px;
-}
-
-.footerLogo h1 {
-  font-family: var(--fonteSecundaria);
-  font-size: 35px;
-  font-weight: 100;
-  letter-spacing: 2px;
-  line-height: 35px;
+  border-radius: 10px 10px 0 0;
 }
 
 .footerLogo {
   display: flex;
-  gap: 10px;
-  flex-direction: column;
-}
-
-.socialConteiner {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  font-family: var(--fonteTerciaria);
-  margin-right: 335px;
-}
-
-.socialConteiner hr {
-  margin-top: 16px;
-  margin-bottom: 11px;
-}
-
-
-.social {
-  font-size: 24px;
-  margin-top: 23px;
-  margin-bottom: 15px;
-}
-
-
-.socialLogo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.socialLogo img {
-  max-width: 30px;
-}
-
-.copyrightVdR {
-  display: flex;
-  justify-content: center;
-  font-family: var(--fonteTerciaria);
-  font-size: 24px;
-  margin-top: 90px;
-}
-
-.footerCtt h1 {
-  font-size: 30px;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-.formasPagamento hr {
-  margin-top: 16px;
-  margin-bottom: 11px;
-}
-
-.formasPagamentoImg {
-  display: flex;
   align-items: center;
   gap: 15px;
+}
+
+.footerLogo img {
+  width: 88px;
+  height: 88px;
+}
+
+.footerLogo h1 {
+  font-family: var(--fonteSecundaria);
+  font-size: 24px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  line-height: 35px;
+  display: flex;
+  align-items: end;
+}
+
+.avisosFooter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-family: var(--fonteTerciaria);
+  font-size: 22px;
+}
+
+.termos a {
+  margin-top: 20px;
+  text-decoration: underline;
+  font-family: var(--fonteTerciaria);
+  color: #ffffffff;
+  font-size: 22px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
