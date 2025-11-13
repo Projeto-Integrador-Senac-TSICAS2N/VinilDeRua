@@ -1,0 +1,465 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+:root {
+  /* fontes */
+  --fontePrimaria: 'Caesar Dressing', cursive;
+  --fonteSecundaria: 'Anton', sans-serif;
+  --fonteTerciaria: "Young Serif", serif;
+  /* Cores */
+  --gradienteVertical1: linear-gradient(180deg, rgba(191, 191, 191, 1) 0%, rgba(81, 81, 81, 1) 100%);
+  --gradienteVertical2: linear-gradient(180deg, rgba(81, 81, 81, 1) 0%, rgba(191, 191, 191, 1) 100%);
+  --gradienteCardDiscos: linear-gradient(-41deg, rgba(159, 159, 159, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  /* drop shadow discos */
+  --dropShadowDiscos: box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.404);
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+
+header {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  justify-content: space-between;
+  background-color: #7E7E7E;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.404);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+nav {
+  display: flex;
+  gap: 78px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: "Caesar Dressing", system-ui;
+  font-size: 32px;
+  transition: color 0.8 ease-in-out;
+}
+
+header img {
+  width: 87px;
+  height: 87px;
+}
+
+.logoHeader {
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  font-family: "Anton", sans-serif;
+  font-size: 35px;
+  transition: color 0.8 ease-in-out;
+}
+
+.logoHeader a {
+  text-decoration: none;
+}
+
+.logoHeader p {
+  margin-left: 7px;
+}
+
+header .icons img {
+  width: 47px;
+  height: 47px;
+  filter: brightness(0) invert(1);
+  /* deixa branco */
+  transition: filter 0.8 ease-in-out;
+}
+
+.icons {
+  display: flex;
+  gap: 14px;
+}
+
+/* ===== ESTADO APÓS ROLAR ===== */
+header.scrolled {
+  background-color: #FFFFFF;
+  padding: 0 25px;
+}
+
+header.scrolled .logoHeader img {
+  content: url("https://i.ibb.co/RknvXKX2/logo-Vinil-De-Rua-preta.png");
+  width: 87px;
+  height: 87px;
+}
+
+header.scrolled .logoHeader p {
+  color: #000000;
+}
+
+header.scrolled nav a {
+  color: #000000;
+}
+
+header.scrolled .logoHeader img {
+  color: #000000;
+}
+
+header.scrolled .icons img {
+  filter: brightness(0);
+}
+
+
+main {
+  background: var(--gradienteVertical1);
+}
+
+.conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  gap: 40px;
+}
+
+.textConteiner {
+  flex: 1;
+  max-width: 500px;
+}
+
+.textConteiner h1 {
+  margin-top: 233px;
+  color: #FFFFFF;
+  font-size: 48px;
+  margin-bottom: 26px;
+}
+
+.textConteiner h1 span {
+  font-style: bold;
+  color: #000000;
+}
+
+.textConteiner p {
+  color: #FFFFFF;
+  font-size: 28px;
+  font-family: "Young Serif", serif;
+  margin-bottom: 366px;
+}
+
+/* SE EU CONSEGUIR FAZER, FAÇO ESSA PARTE DE CAMDADA CERTIN DPS OK BY: EDUARDO */
+
+/* Todas as imagens ocupam o mesmo espaço */
+/* .imageHero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.discoGirando {
+  z-index: 1;
+  width: 150%;   
+  left: -25%;    
+}
+
+
+.fundo {
+  z-index: 2; 
+}
+
+.imgSabota {
+  z-index: 3; 
+}
+
+*/
+
+.fundoPrincipal{
+    background: var(--gradienteVertical2);
+
+}
+
+
+
+.catalogoIndex {
+  padding-top: 100px;
+  padding-right: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 224px);
+  gap: 42px;
+  /* diminui o espaço entre eles */
+  font-family: Arial, sans-serif;
+  justify-content: right;
+  /* centraliza o grid no meio da tela */
+}
+
+.cardDisco {
+  width: 224px;
+  height: 253px;
+  background: var(--gradienteCardDiscos);
+  font-family: var(--fontePrimaria);
+  border-radius: 5px;
+  padding: 0px 7px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.cardDisco:hover {
+  transform: scale(1.03);
+}
+
+.cardDisco .imgCard {
+  cursor: pointer;
+  padding-top: 6px;
+  padding-left: 7px;
+  padding-right: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardDisco .imgCard>img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.infoDisco {
+  font-size: 15px;
+  padding-bottom: 20px;
+}
+
+.infoDisco .preçoDisco {
+  padding-top: 4px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+.preçoEFavDisco {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.preçoEFavDisco button {
+  border-radius: 3px;
+  border: 1px solid #000000;
+  padding: 2px 12px;
+  font-family: var(--fontePrimaria);
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.preçoEFavDisco button:hover {
+  background-color: #acacac;
+  color: #ffffff;
+  border: 2.2px solid #ffffff;
+  transform: scale(1.0);
+  box-shadow: 12px 12px 12px 2px rgba(0, 0, 0, 0.2);
+}
+
+.preçoEFavDisco .favorite img {
+  width: 20px;
+  height: 20px;
+  transition: color 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.preçoEFavDisco .cart img {
+  width: 20px;
+  height: 20px;
+  transition: color 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.preçoEFavDisco .favorite img:hover {
+  content: url("https://i.ibb.co/b5vJrSGP/favorite-Red.png");
+}
+
+.preçoEFavDisco .cart img:hover {
+  content: url("https://i.ibb.co/DPg9f9c3/add-shopping-cart-3.png");
+}
+
+.btnVerMais{
+  display: flex;
+  padding: 40px;
+  justify-content: right;
+}
+.btnVerMais img {
+  width: 24px;
+  height: 15px;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.btnVerMais button {
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: var(--fonteSecundaria);
+  cursor: pointer;
+}
+
+.explorarCategorias{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+.explorarCategorias h1{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+  font-family: var(--fontePrimaria);
+  font-size: 32px;
+  color: #ffffff;
+  font-weight: 100;
+}
+
+.categorias{
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.categorias img{
+  width: 100%;
+  display: block;
+}
+
+.cardCategorias{
+  position: relative;
+  display: inline-block;
+}
+
+.cardCategorias p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #838383;
+  font-family: var(--fontePrimaria);
+  font-size: 24px;
+  padding: 5px 33px;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+footer {
+  background-color: #4C4C4C;
+  color: white;
+  padding: 30px;
+  border-radius: 30px 30px 0px 0px;
+
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  justify-content: flex-start;
+  gap: 238px;
+}
+
+.footerLogo img{
+  width: 117px;
+  height: 117px;
+}
+
+.footerLogo h1{
+  font-family: var(--fonteSecundaria);
+  font-size: 35px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  line-height: 35px;
+}
+
+.footerLogo {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.socialConteiner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: var(--fonteTerciaria);
+  margin-right: 335px;
+}
+
+.socialConteiner hr{
+  margin-top: 16px;
+  margin-bottom: 11px;
+}
+
+
+.social {
+  font-size: 24px;
+  margin-top: 23px;
+  margin-bottom: 15px;
+}
+
+
+.socialLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.socialLogo img {
+  max-width: 30px;
+}
+
+.copyrightVdR{
+  display: flex;
+  justify-content: center;
+  font-family: var(--fonteTerciaria);
+  font-size: 24px;
+  margin-top: 90px;
+}
+
+.footerCtt h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.formasPagamento hr{
+  margin-top: 16px;
+  margin-bottom: 11px;
+}
+.formasPagamentoImg{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+

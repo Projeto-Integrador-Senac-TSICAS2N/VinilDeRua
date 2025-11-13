@@ -1,0 +1,379 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+:root {
+  /* fontes */
+  --fontePrimaria: 'Caesar Dressing', cursive;
+  --fonteSecundaria: 'Anton', sans-serif;
+  --fonteTerciaria: "Young Serif", serif;
+  --fonteNumeros: "Sahitya", serif;
+  /* Cores */
+  --gradienteVertical1: linear-gradient(180deg, rgba(191, 191, 191, 1) 0%, rgba(81, 81, 81, 1) 100%);
+  --gradienteVertical2: linear-gradient(180deg, rgba(81, 81, 81, 1) 0%, rgba(191, 191, 191, 1) 100%);
+  --gradienteCardDiscos: linear-gradient(-41deg, rgba(159, 159, 159, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  /* drop shadow discos */
+  --dropShadowDiscos: box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.404);
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+
+header {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  justify-content: space-between;
+  background-color: #7E7E7E;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.404);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+nav {
+  display: flex;
+  gap: 78px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: "Caesar Dressing", system-ui;
+  font-size: 32px;
+  transition: color 0.8 ease-in-out;
+}
+
+header img {
+  width: 87px;
+  height: 87px;
+}
+
+.logoHeader {
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  font-family: "Anton", sans-serif;
+  font-size: 35px;
+  transition: color 0.8 ease-in-out;
+}
+
+.logoHeader a {
+  text-decoration: none;
+}
+
+.logoHeader p {
+  margin-left: 7px;
+}
+
+header .icons img {
+  width: 47px;
+  height: 47px;
+  filter: brightness(0) invert(1);
+  /* deixa branco */
+  transition: filter 0.8 ease-in-out;
+}
+
+.icons {
+  display: flex;
+  gap: 14px;
+}
+
+/* ===== ESTADO APÓS ROLAR ===== */
+header.scrolled {
+  background-color: #FFFFFF;
+  padding: 0 25px;
+}
+
+header.scrolled .logoHeader img {
+  content: url("https://i.ibb.co/RknvXKX2/logo-Vinil-De-Rua-preta.png");
+  width: 87px;
+  height: 87px;
+}
+
+header.scrolled .logoHeader p {
+  color: #000000;
+}
+
+header.scrolled nav a {
+  color: #000000;
+}
+
+header.scrolled .logoHeader img {
+  color: #000000;
+}
+
+header.scrolled .icons img {
+  filter: brightness(0);
+}
+
+/* Parte do carrinho */
+
+.fundoPrincipal {
+  background: var(--gradienteVertical2);
+
+}
+
+.cardTituloCarrinho {
+
+  padding-top: 165px;
+  display: flex;
+}
+
+.tituloCarrinho {
+  padding-left: 125px;
+  padding-right: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 29px;
+  color: #ffffff;
+  background-color: #000000;
+  border-radius: 0 10px 10px 0;
+
+}
+
+
+.infoSituation {
+  font-family: var(--fonteTerciaria);
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoSituation img {
+  width: 50px;
+  height: 50px;
+}
+
+.produtoSituation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #D9D9D9;
+  border-radius: 30px 10px 10px 30px;
+  padding-right: 60px;
+  padding-left: 1px;
+}
+
+.indentificacaoSituation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 60%;
+  background-color: #848484;
+  border-radius: 30px 10px 10px 30px;
+  padding-right: 60px;
+  padding-left: 1px;
+}
+
+.pagamentoSituation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 60%;
+  background-color: #848484;
+  border-radius: 30px 10px 10px 30px;
+  padding-right: 60px;
+  padding-left: 1px;
+}
+
+
+
+
+.itensCarrinho {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 65px;
+  justify-content: center;
+  font-family: var(--fonteTerciaria);
+  padding-bottom: 112px;
+}
+
+.itemCar {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.itemCar .imgCar {
+  border: 2.5px solid #000000;
+  padding: 8px 5px;
+  border-radius: 0 100px 100px 0;
+}
+
+.itemCar .infoCarrinho {
+  border: 2.5px solid #000000;
+  padding: 15px 34px;
+  display: flex;
+  gap: 40px;
+}
+
+
+
+.itemCar .infoCarrinho .info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+
+.infoQuantidade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.infoQuantidade button {
+  border: none;
+
+}
+
+.infoQuantidade .menos button {
+  background-color: #B5B5B5;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.numeroQuant {
+  align-items: center;
+  font-family: var(--fonteNumeros);
+  background-color: #ffffff;
+  padding: 9.1px;
+}
+
+.mais button {
+  color: #FFFFFF;
+  background-color: #000000;
+  padding: 15px;
+  cursor: pointer;
+}
+
+
+.itensCarrinho .deleteItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itensCarrinho .deleteItem img {
+  width: 47px;
+  height: 47px;
+}
+
+
+
+
+footer {
+  background-color: #4C4C4C;
+  color: white;
+  padding: 30px;
+  border-radius: 30px 30px 0px 0px;
+
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  justify-content: flex-start;
+  gap: 238px;
+}
+
+.footerLogo img {
+  width: 117px;
+  height: 117px;
+}
+
+.footerLogo h1 {
+  font-family: var(--fonteSecundaria);
+  font-size: 35px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  line-height: 35px;
+}
+
+.footerLogo {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.socialConteiner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: var(--fonteTerciaria);
+  margin-right: 335px;
+}
+
+.socialConteiner hr {
+  margin-top: 16px;
+  margin-bottom: 11px;
+}
+
+
+.social {
+  font-size: 24px;
+  margin-top: 23px;
+  margin-bottom: 15px;
+}
+
+
+.socialLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.socialLogo img {
+  max-width: 30px;
+}
+
+.copyrightVdR {
+  display: flex;
+  justify-content: center;
+  font-family: var(--fonteTerciaria);
+  font-size: 24px;
+  margin-top: 90px;
+}
+
+.footerCtt h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.formasPagamento hr {
+  margin-top: 16px;
+  margin-bottom: 11px;
+}
+
+.formasPagamentoImg {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}

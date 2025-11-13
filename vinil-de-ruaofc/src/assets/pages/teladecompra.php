@@ -1,0 +1,258 @@
+<?php 
+session_start();
+require __DIR__ . '/../scripts/conexao.php';
+
+// Suporte a login persistente removido; verifica apenas sessão.
+if (!isset($_SESSION['usuario_id'])) {
+    header("Location: perfilUsuario.php?erro=" . urlencode("Faça login para continuar."));
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu carrinho - Vinil de Rua</title>
+    <!-- FONTES USADASS -->
+    <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+    <!-- SEPARAÇÃO -->
+    <link rel="stylesheet" href="../styles/carrinho.css">
+    <link rel="shortcut icon" type="imagex/png" href="../images/logoVinilDeRua.svg">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <img src="https://i.ibb.co/qYwvJYpw/loading.gif" alt="loading" border="0">
+    </div>
+
+    <header>
+        <div class="logoHeader">
+            <a href="/index.html"><img src="https://i.ibb.co/zhNXFH1t/logo-Vinil-De-Rua-branca.png"
+                    alt="logo-Vinil-De-Rua" border="0"></a>
+            <p>Vinil <br>de Rua</p>
+        </div>
+        <nav>
+            <a href="">Cátalogo</a>
+            <a href="">Ofertas</a>
+            <a href="">Contato</a>
+        </nav>
+        <div class="icons">
+            <a href="/src/assets/pages/favorito.html"><img src="https://i.ibb.co/ynVyBhq2/favorite.png" alt="favorite"
+                    border="0"></a>
+            <a href="/src/assets/pages/carrinho.html"><img src="https://i.ibb.co/JRf4dtY8/shopping-cart.png"
+                    alt="shopping-cart" border="0"></a>
+            <a href="../pages/loginUser.php"><img src="https://i.ibb.co/4RGqW28z/account-circle.png"
+                    alt="account-circle" border="0"></a>
+        </div>
+    </header>
+
+
+    <section class="fundoPrincipal">
+        <div class="cardTituloCarrinho">
+            <div class="tituloCarrinho">
+                <h1>Carrinho</h1>
+                <img src="https://i.ibb.co/JRf4dtY8/shopping-cart.png" alt="">
+            </div>
+        </div>
+
+        <div class="infoSituation">
+            <div class="produtoSituation">
+                <img src="https://i.ibb.co/zhNXFH1t/logo-Vinil-De-Rua-branca.png" alt="logo Vinil De Rua">
+                <p>Produtos</p>
+            </div>
+            <div class="indentificacaoSituation">
+                <img src="https://i.ibb.co/RknvXKX2/logo-Vinil-De-Rua-preta.png" alt="logo Vinil De Rua">
+                <p>Indentificação</p>
+            </div>
+            <div class="pagamentoSituation">
+                <img src="https://i.ibb.co/RknvXKX2/logo-Vinil-De-Rua-preta.png" alt="logo Vinil De Rua">
+                <p>Pagamento</p>
+            </div>
+        </div>
+
+        <div class="itensCarrinho">
+            <div class="itemCar">
+                <img src="https://i.ibb.co/HQmNvPD/1999-Vinyl.png" alt="Capa do álbum 1999 - Joey Bada$$"
+                    class="imgCar">
+                <div class="infoCarrinho">
+                    <div class="info">
+                        <h1>Resumo</h1>
+                        <p>Vinyl Joey Bada$$ - 1999</p>
+                        <p>Qauntidade: 1</p>
+                        <p>ID: 12345678</p>
+                    </div>
+                    <div class="info">
+                        <h1>Quantidade</h1>
+                        <div class="infoQuantidade">
+                            <div class="menos">
+                                <button>-</button>
+                            </div>
+                            <div class="numeroQuant">
+                                <p>1</p>
+                            </div>
+                            <div class="mais">
+                                <button>+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h1>Preço unitário</h1>
+                        <p>R$200,00</p>
+                    </div>
+                    <div class="info">
+                        <h1>Preço final</h1>
+                        <p>R$200,00</p>
+                    </div>
+                </div>
+                <div class="deleteItem">
+                    <img src="https://i.ibb.co/Zzdfgwmf/delete.png" alt="">
+                </div>
+            </div>
+
+            <div class="itemCar">
+                <img src="https://i.ibb.co/qFNWX05J/love-Vinyl.png" alt="Capa do álbum Love Deluxe - Sade"
+                    class="imgCar">
+                <div class="infoCarrinho">
+                    <div class="info">
+                        <h1>Resumo</h1>
+                        <p>Vinyl Joey Bada$$ - 1999</p>
+                        <p>Qauntidade: 1</p>
+                        <p>ID: 12345678</p>
+                    </div>
+                    <div class="info">
+                        <h1>Quantidade</h1>
+                        <div class="infoQuantidade">
+                            <div class="menos">
+                                <button>-</button>
+                            </div>
+                            <div class="numeroQuant">
+                                <p>1</p>
+                            </div>
+                            <div class="mais">
+                                <button>+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h1>Preço unitário</h1>
+                        <p>R$200,00</p>
+                    </div>
+                    <div class="info">
+                        <h1>Preço final</h1>
+                        <p>R$200,00</p>
+                    </div>
+                </div>
+                <div class="deleteItem">
+                    <img src="https://i.ibb.co/Zzdfgwmf/delete.png" alt="">
+                </div>
+            </div>
+
+            <div class="itemCar">
+                <img src="https://i.ibb.co/mVMF4HZ2/mmesf-Vinyl.png"
+                    alt="Capa do álbum Melt my Eyez see your futere - Denzel Curry" class="imgCar">
+                <div class="infoCarrinho">
+                    <div class="info">
+                        <h1>Resumo</h1>
+                        <p>Vinyl Joey Bada$$ - 1999</p>
+                        <p>Qauntidade: 1</p>
+                        <p>ID: 12345678</p>
+                    </div>
+                    <div class="info">
+                        <h1>Quantidade</h1>
+                        <div class="infoQuantidade">
+                            <div class="menos">
+                                <button>-</button>
+                            </div>
+                            <div class="numeroQuant">
+                                <p>1</p>
+                            </div>
+                            <div class="mais">
+                                <button>+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h1>Preço unitário</h1>
+                        <p>R$200,00</p>
+                    </div>
+                    <div class="info">
+                        <h1>Preço final</h1>
+                        <p>R$200,00</p>
+                    </div>
+                </div>
+                <div class="deleteItem">
+                    <img src="https://i.ibb.co/Zzdfgwmf/delete.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer id="contato">
+            <div class="footerContainer">
+                <div class="footerLogo">
+                    <img src="https://i.ibb.co/zhNXFH1t/logo-Vinil-De-Rua-branca.png" alt="Vinil de Rua" class="logo">
+                    <h1>VINIL <br>DE RUA</h1>
+                </div>
+                <div class="socialConteiner">
+                    <div class="footerCtt">
+                        <h1>Contato</h1>
+                        <hr>
+                        <p>contato@vinilderua.com.br</p>
+                        <p>(11) 11 4002-8922</p>
+                    </div>
+                    <p class="social">Nos siga:</p>
+                    <div class="socialLogo">
+                        <img style="cursor: pointer;" onclick="window.open('https://wa.me/5511945859221', '_blank')"
+                            src="https://i.ibb.co/d0pJB3H5/zapLogo.png" alt="WhatsApp">
+                        <img style="cursor: pointer;"
+                            onclick="window.open('https://www.instagram.com/duudjs_/', '_blank')"
+                            src="https://i.ibb.co/Gv2fVPqD/insta-Logo.png" alt="Instagram">
+                        <img style="cursor: pointer;" onclick="window.open('https://br.pinterest.com/', '_blank')"
+                            src="https://i.ibb.co/BKNqDc8Z/pinterest-Logo.png" alt="Pinterest">
+                        <img style="cursor: pointer;" onclick="window.open('https://www.facebook.com/', '_blank')"
+                            src="https://i.ibb.co/SXZ6bhxx/faceLogo.png" alt="Facebook">
+                    </div>
+                </div>
+                <div class="formasPagamento">
+                    <h1>Formas de pagamento</h1>
+                    <hr>
+                    <div class="formasPagamentoImg">
+                        <a href="https://ibb.co/5gLxyp3k"><img src="https://i.ibb.co/Zpx1P4rS/fiadoPay.png"
+                                alt="fiadoPay"></a>
+                        <a href=""><img src="https://i.ibb.co/PGTbDWv8/applePay.png" alt="applePay"></a>
+                        <a href=""><img src="https://i.ibb.co/j9xwJZxb/google-Pay.png" alt="google-Pay"></a>
+                        <a href=""><img src="https://i.ibb.co/Jw4Fw4Q4/mastercard-Pay.png" alt="mastercard-Pay"></a>
+                        <a href=""><img src="https://i.ibb.co/WpgW73SM/pixPay.png" alt="pixPay" </a>
+                            <a href=""><img src="https://i.ibb.co/RGHkXJks/visaPay.png" alt="visaPay"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyrightVdR">
+                <p>Copyright © 2025 Vinil de Rua </p>
+            </div>
+        </footer>
+    </section>
+
+    <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/loading.js"></script>
+</body>
+
+</html>
