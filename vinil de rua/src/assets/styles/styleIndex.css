@@ -190,15 +190,37 @@ main {
 */
 
 .fundoPrincipal {
-  height: auto;               
-  width: 100%;                 
-  background-image: url("https://i.ibb.co/FqY6YvNf/fundo-Muro-Tijolo.png");
-  background-size: cover;      
-  background-position: center; 
+  position: relative;                /* necessário para o ::before posicionar-se sobre o elemento */
+  height: auto;
+  width: 100%;
+  background: var(--gradienteVertical2); /* mantém o gradiente da variável */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
+/* pseudo-elemento contendo só a imagem, com opacidade */
+.fundoPrincipal::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  background-image: url("https://i.ibb.co/FqY6YvNf/fundo-Muro-Tijolo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.6; 
+  z-index: 0;
+}
 
+.fundoPrincipal > * {
+  position: relative;
+  z-index: 1;
+}
+
+.offECatalogo{
+  display: flex;
+  gap: 85px;
+}
 
 
 .catalogoIndex {
@@ -207,10 +229,7 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 224px);
   gap: 42px;
-  /* diminui o espaço entre eles */
-  font-family: Arial, sans-serif;
   justify-content: right;
-  /* centraliza o grid no meio da tela */
 }
 
 .cardDisco {
@@ -225,6 +244,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.2s ease;
+  cursor: pointer;
 }
 
 .cardDisco:hover {
@@ -322,6 +342,8 @@ main {
 .btnVerMais button {
   align-items: center;
   padding: 10px 20px;
+  border: none;
+  border: 2px solid #000000;
   border-radius: 5px;
   font-family: var(--fonteSecundaria);
   cursor: pointer;
