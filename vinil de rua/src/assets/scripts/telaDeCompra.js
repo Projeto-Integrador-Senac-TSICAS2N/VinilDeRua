@@ -46,7 +46,7 @@ function selecionarProduto(produto) {
 // SPOTIFY - Mostrar faixas e prévias do álbum
 // ==============================================
 async function buscarAlbumSpotify(nomeAlbum) {
-    const token = 'BQAySuMi6jOz9HPpZOON1_d6FJ5zMJ4u4OwUFf_OBxPXo_gPJ3KNXW_s4wFI6KWNztVy5kMLEVUbO5k8Kg8UOu87t5ubNRnWu0gc0RU76AoWnTgfm7_n28iqG0ZDswaJRhtnY-zhJDg'; // 🔑 substitua pelo seu token temporário do Spotify
+    const token = ''; // 🔑 substitua pelo seu token temporário do Spotify
 
     const res = await fetch(
         `https://api.spotify.com/v1/search?q=${encodeURIComponent(nomeAlbum)}&type=album&limit=1`,
@@ -57,7 +57,7 @@ async function buscarAlbumSpotify(nomeAlbum) {
 }
 
 async function pegarFaixasSpotify(albumId) {
-    const token = 'BQAySuMi6jOz9HPpZOON1_d6FJ5zMJ4u4OwUFf_OBxPXo_gPJ3KNXW_s4wFI6KWNztVy5kMLEVUbO5k8Kg8UOu87t5ubNRnWu0gc0RU76AoWnTgfm7_n28iqG0ZDswaJRhtnY-zhJDg';
+    const token = '';
     const res = await fetch(
         `https://api.spotify.com/v1/albums/${albumId}/tracks`,
         { headers: { Authorization: `Bearer ${token}` } }
@@ -122,7 +122,7 @@ window.onload = async function() {
 
 // Função para buscar álbum no Spotify
 async function buscarAlbumSpotify(nomeAlbum) {
-    const token = 'BQAySuMi6jOz9HPpZOON1_d6FJ5zMJ4u4OwUFf_OBxPXo_gPJ3KNXW_s4wFI6KWNztVy5kMLEVUbO5k8Kg8UOu87t5ubNRnWu0gc0RU76AoWnTgfm7_n28iqG0ZDswaJRhtnY-zhJDg'; // 🔑 Gere com o script Bash
+    const token = ''; // 🔑
     const res = await fetch(
         `https://api.spotify.com/v1/search?q=${encodeURIComponent(nomeAlbum)}&type=album&limit=1`,
         { headers: { Authorization: `Bearer ${token}` } }

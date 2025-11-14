@@ -15,7 +15,7 @@ echo
 echo "Resposta da API:"
 echo "$response"
 echo
-
+!
 token=$(echo "$response" | grep -o '"access_token":"[^"]*"' | cut -d':' -f2 | tr -d '"')
 
 if [ -n "$token" ]; then
@@ -27,3 +27,7 @@ if [ -n "$token" ]; then
 else
     echo "❌ Erro: não foi possível gerar o token. Veja a resposta acima."
 fi
+
+
+# chmod +x gerar_token_spotify.sh
+# ./gerar_token_spotify.sh
