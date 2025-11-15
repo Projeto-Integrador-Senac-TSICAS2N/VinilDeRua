@@ -507,3 +507,22 @@ footer {
   align-items: center;
   gap: 15px;
 }
+
+
+
+.card
+
+.listaDiscos {
+  width: 300px;          
+  height: 200px;        
+  overflow-y: auto;     
+  border: 2px solid #ccc;
+  padding: 10px;
+  scrollbar-width: thin;
+}
+.disco {
+  background: #eee;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 8px;
+}
