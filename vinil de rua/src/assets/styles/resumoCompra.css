@@ -301,6 +301,13 @@ header.scrolled .icons img {
     gap: 10px;
 }
 
+.formasPagamento{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
 
 .circleCheckbox {
     display: flex;
@@ -327,7 +334,6 @@ header.scrolled .icons img {
     background: #000;
     padding: 10px;
 }
-
 
 .fazerPagamento button {
     border-radius: 3px;
