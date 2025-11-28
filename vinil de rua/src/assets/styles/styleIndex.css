@@ -221,9 +221,11 @@ main {
   display: flex;
   justify-content: center;
   gap: 85px;
+  
 }
 
 .offECatalogo .cardOff{
+  margin-top: 100px;
   background-color: var(--gradienteCards);
   border: 1.5px solid #000000;
   display: flex;
@@ -233,6 +235,26 @@ main {
   height: 510px;
 }
 
+.cardDiscoOff{
+  border: 2px solid none;
+  background: var(--gradienteCardDiscos);
+  font-family: var(--fontePrimaria);
+  border-radius: 5px;
+  padding: 0px 7px;
+  overflow: hidden;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.cardDiscoOff .offDisco{
+  font-size: 25px;
+  color: #ff0000;
+}
 
 .offECatalogo .cardOff .offEimg{
   display: flex;
@@ -241,18 +263,46 @@ main {
   padding: 0 4px;
   gap: 5px;
   font-family: var(--fontePrimaria);
-  border: 2px solid red;
+}
+
+.cardOff{
+  font-family: var(--fontePrimaria);
+}
+
+
+.offEimg{
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.offEimg a {
+  display: inline-block; 
+  margin: 0;
+  text-decoration: none; 
+  text-align: left;      
+}
+
+.offEimg > * {
+  align-self: flex-start;
 }
 
 .offEimg h1{
   font-size: 30px;
 }
 
-.cardOff .listaDiscos{
-  overflow-y: hidden;
-  scrollbar-width: thin;
-  
+.linkEImg{
+  display: flex;
+  gap: 20px;
+}
 
+.cardOff .listaDiscos{
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #4E4E4E #989898;
+  padding-right: 50px;
 }
 
 

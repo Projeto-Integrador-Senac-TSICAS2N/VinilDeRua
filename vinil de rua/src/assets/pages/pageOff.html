@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categoria - Drill</title>
+    <title>CATALOGO OFF</title>
     <!-- FONTES USADASS -->
     <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,11 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
     <!-- SEPARAÇÃO -->
-    <link rel="stylesheet" href="/src/assets/styles/styleCategorias.css">
+    <link rel="stylesheet" href="/src/assets/styles/pageOff.css">
     <link rel="shortcut icon" type="imagex/png" href="/src/assets/images/logoVinilDeRua.svg">
 
 </head>
-
 
 <body>
 
@@ -36,7 +35,7 @@
             <a href="#contato">Contato</a>
         </nav>
         <div class="icons">
-            <a href="//src/assets/pages/favorito.html"><img src="https://i.ibb.co/ynVyBhq2/favorite.png"
+            <a href="/src/assets/pages/favorito.html"><img src="https://i.ibb.co/ynVyBhq2/favorite.png"
                     alt="favorite"></a>
             <a href="/src/assets/pages/carrinho.html"><img src="https://i.ibb.co/JRf4dtY8/shopping-cart.png"
                     alt="shopping-cart"></a>
@@ -44,39 +43,33 @@
                     alt="account-circle"></a>
         </div>
     </header>
-    <main>
-        <div class="conteiner">
-            <img src="https://i.ibb.co/TqYgxQTr/drillImg.png" alt="Imagem categoria Drill">
-            <span>
-                <p>DRILL</p>
-            </span>
 
-        </div>
-    </main>
-    <section class="fundoPrincipal">
-        <div class="outrasCategorias">
-            <h1>Explorar outras categorias:</h1>
-            <div class="categorias">
-                <a href="/src/assets/pages/grimeCategoria.html">Grime</a>
-                <a href="/src/assets/pages/boombapCategoria.html">Boombap</a>
-                <a href="/src/assets/pages/90sCategoria.html">90's - Y2k</a>
-                <a href="/src/assets/pages/r&bCategoria.html">R&B</a>
+
+    <section class="fundoPrincipal" #catalogoOff>
+        <div class="bannerBlackFriday">
+            <div class="anuncioBlackFriday">
+                <h1>DESCONTOS BLACK FRIDAY EM DISCOS ATÉ 60% OFF!!</h1>
             </div>
+            <button class="filtroOff">
+                <img src=" https://i.ibb.co/5XmYQG0x/filtro-Icon.png" alt="">
+                <p>Filtrar</p>
+            </button>
         </div>
-        <section class="catalogoCategoria">
+
+        <div class="catalogoOff>
             <div class="cardDisco">
-                <img src="https://i.ibb.co/YTFLy3Zy/23LP.png" alt="Capa do álbum 23 - Central Cee"
-                    class="imgCard">
+                <img src="https://i.ibb.co/wrN6N3y8/sosLP.png" alt="Capa do álbum SOS - SZA" class="imgCard">
                 <div class="infoDisco">
-                    <p class="nomeDisco">23 - Central Cee</p>
-                    <p class="precoDisco">R$ 325</p>
+                    <p class="nomeDisco">SOS - SZA</p>
+                    <p class="precoAntigo">R$ 600</p>
+                    <p class="precoDiscoOff">R$ 430</p>
                 </div>
                 <div class="preçoEFavDisco">
                     <button class="btnComprarAgora" onclick="selecionarProduto({
                         id: 1,
-                        titulo: '23 - Central Cee',
-                        img: 'https://i.ibb.co/YTFLy3Zy/23LP.png',
-                        preco: 325
+                        titulo: 'SOS - SZA',
+                        img: 'https://i.ibb.co/wrN6N3y8/sosLP.png',
+                        preco: 430
                     })">Comprar agora</button>
                     <div class="cart">
                         <button class="addCarrinho">
@@ -91,19 +84,22 @@
                 </div>
             </div>
 
+
+
             <div class="cardDisco">
-                <img src="https://i.ibb.co/YBJJc8Pm/errejota-LP.png"
-                    alt="Capa do  álbum ErrejotaCultdrill vol.2 - big Bllakk" class="imgCard">
+                <img src="https://i.ibb.co/PsWFFQdv/blond-Vinyl.png" alt="Capa do álbum Blonde - Frank Ocean"
+                    class="imgCard">
                 <div class="infoDisco">
-                    <p class="nomeDisco">ErrejotaCultdrill vol.2 - big Bllakk</p>
-                    <p class="precoDisco">R$ 65</p>
+                    <p class="nomeDisco">Blonde - Frank Ocean</p>
+                    <p class="precoAntigo">R$ 500</p>
+                    <p class="precoDiscoOff">R$ 500</p>
                 </div>
                 <div class="preçoEFavDisco">
                     <button class="btnComprarAgora" onclick="selecionarProduto({
                         id: 2,
-                        titulo: 'ErrejotaCultdrill vol.2 - big Bllakk',
-                        img: 'https://i.ibb.co/YBJJc8Pm/errejota-LP.png',
-                        preco: 65
+                        titulo: 'Blonde - Frank Ocean',
+                        img: 'https://i.ibb.co/PsWFFQdv/blond-Vinyl.png',
+                        preco: 500
                     })">Comprar agora</button>
                     <div class="cart">
                         <button class="addCarrinho">
@@ -118,19 +114,20 @@
                 </div>
             </div>
 
+
             <div class="cardDisco">
-                <img src="https://i.ibb.co/xtwkgMss/rnbLP.png" alt="Capa do álbum Rap dos novos bandidos - Sant"
-                    class="imgCard">
+                <img src="https://i.ibb.co/ccjr6sXh/deParaLP.png" alt="Capa do álbum De: Para: - Sant" class="imgCard">
                 <div class="infoDisco">
-                    <p class="nomeDisco">Rap dos novos bandidos - Sant</p>
-                    <p class="precoDisco">R$ 60</p>
+                    <p class="nomeDisco">De: Para: - Sant</p>
+                    <p class="precoAntigo">R$ 100</p>
+                    <p class="precoDiscoOff">R$ 100</p>
                 </div>
                 <div class="preçoEFavDisco">
                     <button class="btnComprarAgora" onclick="selecionarProduto({
                         id: 3,
-                        titulo: 'Rap dos novos bandidos - Sant',
-                        img: 'https://i.ibb.co/xtwkgMss/rnbLP.png',
-                        preco: 60
+                        titulo: 'De: Para: - Sant',
+                        img: 'https://i.ibb.co/ccjr6sXh/deParaLP.png',
+                        preco: 100
                     })">Comprar agora</button>
                     <div class="cart">
                         <button class="addCarrinho">
@@ -138,26 +135,54 @@
                         </button>
                     </div>
                     <div class="favorite">
-                        <a href="/src/assets/pages/favorito.html">
-                            <img src="https://i.ibb.co/5mHR0sq/favorite-Black.png" alt="favorito">
-                        </a>
+                        <a href="/src/assets/pages/favorito.html"><img src="https://i.ibb.co/5mHR0sq/favorite-Black.png"
+                                alt="favorito"></a>
                     </div>
                 </div>
             </div>
 
             <div class="cardDisco">
-                <img src="https://i.ibb.co/4Z4NHqdb/finallt-Rich-LP.png"
-                    alt="Capa do álbum Finally rich - Chief Keef" class="imgCard">
+                <img src="https://i.ibb.co/jZq6YsFN/amlLP.png" alt="Capa do  álbum Awaken, my love - Childish Gambino"
+                    class="imgCard">
                 <div class="infoDisco">
-                    <p class="nomeDisco">Finally rich - Chief Keef</p>
-                    <p class="precoDisco">R$ 310</p>
+                    <p class="nomeDisco">Awaken, my love - Childish Gambino</p>
+                    <p class="precoAntigo">R$ 275</p>
+                    <p class="precoDiscoOff">R$ 275</p>
                 </div>
                 <div class="preçoEFavDisco">
                     <button class="btnComprarAgora" onclick="selecionarProduto({
                         id: 4,
-                        titulo: 'Finally rich - Chief Keef',
-                        img: 'https://i.ibb.co/4Z4NHqdb/finallt-Rich-LP.png',
-                        preco: 310
+                        titulo: 'Awaken, my love - Childish Gambino',
+                        img: 'https://i.ibb.co/jZq6YsFN/amlLP.png',
+                        preco: 275
+                    })">Comprar agora</button>
+                    <div class="cart">
+                        <button class="addCarrinho">
+                            <img src="https://i.ibb.co/6RFY694G/add-shopping-cart-1.png" alt="carrinho">
+                        </button>
+                    </div>
+                    <div class="favorite">
+                        <a href="/src/assets/pages/favorito.html">
+                            <img src="https://i.ibb.co/5mHR0sq/favorite-Black.png" alt="favorito">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardDisco">
+                <img src="https://i.ibb.co/v6KZbMdf/love-Deluxe-LP.png" alt="Capa do álbum Love Deluxe - Sade"
+                    class="imgCard">
+                <div class="infoDisco">
+                    <p class="nomeDisco">Love Deluxe - Sade</p>
+                    <p class="precoAntigo">R$ 230</p>
+                    <p class="precoDiscoOff">R$ 230</p>
+                </div>
+                <div class="preçoEFavDisco">
+                    <button class="btnComprarAgora" onclick="selecionarProduto({
+                        id: 5,
+                        titulo: 'Love Deluxe - Sade',
+                        img: 'https://i.ibb.co/v6KZbMdf/love-Deluxe-LP.png',
+                        preco: 230
                     })">Comprar agora</button>
                     <div class="cart">
                         <button class="addCarrinho">
@@ -174,45 +199,19 @@
 
 
             <div class="cardDisco">
-                <img src="https://i.ibb.co/zVXzdNL2/7220LP.png"
-                    alt="Capa do álbum 7220 - Lil Durk" class="imgCard">
-                <div class="infoDisco">
-                    <p class="nomeDisco">7220 - Lil Durk</p>
-                    <p class="precoDisco">R$ 170</p>
-                </div>
-                <div class="preçoEFavDisco">
-                    <button class="btnComprarAgora" onclick="selecionarProduto({
-                        id: 5,
-                        titulo: '7220 - Lil Durk',
-                        img: 'https://i.ibb.co/zVXzdNL2/7220LP.png',
-                        preco: 170
-                    })">Comprar agora</button>
-                    <div class="cart">
-                        <button class="addCarrinho">
-                            <img src="https://i.ibb.co/6RFY694G/add-shopping-cart-1.png" alt="carrinho">
-                        </button>
-                    </div>
-                    <div class="favorite">
-                        <a href="/src/assets/pages/favorito.html"><img src="https://i.ibb.co/5mHR0sq/favorite-Black.png"
-                                alt="favorito"></a>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="cardDisco">
-                <img src="https://i.ibb.co/NgWYV098/adolessence-LP.png" alt="Capa do  álbum Adolescence - Unknown T"
+                <img src="https://i.ibb.co/C3h0dY4R/mamas-Gun-LP.png" alt="Capa do  álbum Mama's Gun - Erykah Badu"
                     class="imgCard">
                 <div class="infoDisco">
-                    <p class="nomeDisco">Adolescence - Unknown T</p>
-                    <p class="precoDisco">R$ 120</p>
+                    <p class="nomeDisco">Mama's Gun - Erykah Badu</p>
+                    <p class="precoAntigo">R$ 255</p>
+                    <p class="precoDiscoOff">R$ 255</p>
                 </div>
                 <div class="preçoEFavDisco">
                     <button class="btnComprarAgora" onclick="selecionarProduto({
                         id: 6,
-                        titulo: 'Adolescence - Unknown T',
-                        img: 'https://i.ibb.co/NgWYV098/adolessence-LP.png',
-                        preco: 120
+                        titulo: 'Mama\'s Gun - Erykah Badu',
+                        img: 'https://i.ibb.co/C3h0dY4R/mamas-Gun-LP.png',
+                        preco: 255
                     })">Comprar agora</button>
                     <div class="cart">
                         <button class="addCarrinho">
@@ -228,18 +227,19 @@
 
 
             <div class="cardDisco">
-                <img src="https://i.ibb.co/nMxgNgbw/ednaLP.png" alt="Capa do álbum EDNA – Headie One"
+                <img src="https://i.ibb.co/JjWYnBsz/rosas-ERimas-LP.png" alt="Capa do álbum Rosas e Rimas - Sain"
                     class="imgCard">
                 <div class="infoDisco">
-                    <p class="nomeDisco">EDNA – Headie One</p>
-                    <p class="precoDisco">R$ 120</p>
+                    <p class="nomeDisco">Rosas e Rimas - Sain</p>
+                    <p class="precoAntigo">R$ 90</p>
+                    <p class="precoDiscoOff">R$ 90</p>
                 </div>
                 <div class="preçoEFavDisco">
                     <button class="btnComprarAgora" onclick="selecionarProduto({
                         id: 7,
-                        titulo: 'EDNA – Headie One',
-                        img: 'https://i.ibb.co/nMxgNgbw/ednaLP.png',
-                        preco: 120
+                        titulo: 'Rosas e Rimas - Sain',
+                        img: 'https://i.ibb.co/JjWYnBsz/rosas-ERimas-LP.png',
+                        preco: 90
                     })">Comprar agora</button>
                     <div class="cart">
                         <button class="addCarrinho">
@@ -255,18 +255,18 @@
 
 
             <div class="cardDisco">
-                <img src="https://i.ibb.co/939sY7PC/sftsafm-LP.png" alt="Capa do  álbum Shoot For The Stars Aim For The Moon - Pop Smoke"
-                    class="imgCard">
+                <img src="https://i.ibb.co/8LfSrdTm/ctrlLP.png" alt="Capa do  álbum Ctrl - SZA" class="imgCard">
                 <div class="infoDisco">
-                    <p class="nomeDisco">Shoot For The Stars Aim For The Moon - Pop Smoke</p>
-                    <p class="precoDisco">R$ 220</p>
+                    <p class="nomeDisco">Ctrl - SZA</p>
+                    <p class="precoAntigo">R$ 225</p>
+                    <p class="precoDiscoOff">R$ 225</p>
                 </div>
                 <div class="preçoEFavDisco">
                     <button class="btnComprarAgora" onclick="selecionarProduto({
                         id: 8,
-                        titulo: 'Shoot For The Stars Aim For The Moon - Pop Smoke',
-                        img: 'https://i.ibb.co/939sY7PC/sftsafm-LP.png',
-                        preco: 220
+                        titulo: 'Ctrl - SZA',
+                        img: 'https://i.ibb.co/8LfSrdTm/ctrlLP.png',
+                        preco: 225
                     })">Comprar agora</button>
                     <div class="cart">
                         <button class="addCarrinho">
@@ -279,11 +279,7 @@
                     </div>
                 </div>
             </div>
-
-        </section>
-
-
-
+        </div>
         <footer id="contato">
             <div class="footerContainer">
                 <div class="footerLogo">
@@ -334,7 +330,6 @@
     <script src="/src/assets/scripts/loading.js"></script>
     <script src="/src/assets/scripts/carrinho.js"></script>
     <script src="/src/assets/scripts/conexão.js"></script>
-    <script src="/src/assets/scripts/telaDeCompra.js"></script>
 
 
 </body>
