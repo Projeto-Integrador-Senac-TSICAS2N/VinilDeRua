@@ -134,6 +134,7 @@ header.scrolled .icons img {
     justify-content: space-between;
     align-items: flex-start;
     margin: 0 150px;
+    
     padding-top: 150px;
 }
 
@@ -174,6 +175,7 @@ header.scrolled .icons img {
     justify-content: center;
     padding: 125px 0;
     margin: 0 210px;
+    border: 2px solid red;
 }
 
 .cardDisco {
