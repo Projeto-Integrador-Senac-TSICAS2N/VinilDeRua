@@ -109,17 +109,13 @@
                             </div>
                         </form>
                     </div>
-
-                    <div class="addFoto">
-                        <h1>Adicione a foto do produto</h1>
-
-                        <label class="areaUpload" id="zonaUpload">
-                        <span class="iconeUpload" id="iconeUpload">+</span>
-                        <input type="file" id="inputArquivo" accept="image/*">
-                        <img id="imagemPreview" class="preVisualizacao" style="display:none;">
-                        </label>
-
-                        <button id="botaoAdicionar">Adicionar imagem</button>
+                    <div class="LPorVit">
+                        <label for="vitOrLP">Selecione o tipo de produto:</label>
+                        <select id="vitOrLP" name="produto">
+                            <option value="" hidden>Selecione</option>
+                            <option value="Vitrola">Vitrola</option>
+                            <option value="Vinil">Vinil</option>
+                        </select>
                     </div>
 
                 </div>
