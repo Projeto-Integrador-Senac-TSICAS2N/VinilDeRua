@@ -354,6 +354,18 @@ header.scrolled .icons img {
 }
 
 
+#areaPix img.qrPix {
+    border: 3px solid #000;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+#areaPix .chavePix {
+    background: #eee;
+    padding: 10px;
+    border-radius: 8px;
+}
+
 
 
 

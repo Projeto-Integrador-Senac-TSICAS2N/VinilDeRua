@@ -135,28 +135,27 @@
 
             <div class="fazerPagamento">
                 <div class="formasPagamento">
-                    <div class="cardResumSo">
-                        <h1>Forma de Pagamento</h1>
-                    </div>
                     <div class="cardResumo">
                         <label class="circleCheckbox">
-                            <input type="checkbox" name="payMethod" id="checkPay">
+                            <input type="checkbox" name="payMethod" data-method="pix">
                             <span></span>
                             <img src="https://i.ibb.co/WpgW73SM/pixPay.png" alt="pixPay">
                             <p>PIX</p>
                         </label>
                     </div>
+
                     <div class="cardResumo">
                         <label class="circleCheckbox">
-                            <input type="checkbox" name="payMethod" id="checkPay">
+                            <input type="checkbox" name="payMethod" data-method="cartao">
                             <span></span>
                             <img src="https://i.ibb.co/Jw4Fw4Q4/mastercard-Pay.png" alt="mastercard-Pay">
                             <p>Débito/Crédito</p>
                         </label>
                     </div>
+
                     <div class="cardResumo">
                         <label class="circleCheckbox">
-                            <input type="checkbox" name="payMethod" id="checkPay">
+                            <input type="checkbox" name="payMethod" data-method="boleto">
                             <span></span>
                             <img src="https://i.ibb.co/5hGCS8jn/boleto-Pay.png" alt="boletoPay">
                             <p>Boleto</p>
@@ -171,8 +170,29 @@
                         </label>
                     </div>
                 </div>
-                <button>Realizar o Pagamento</button>
+                <button onclick="realizarPagamento()">Realizar o Pagamento</button>
             </div>
+
+            <div id="areaPix" style="display:none; text-align:center;">
+                <h3>PIX</h3>
+
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=Vinil%20De%20Rua%20Pagamento"
+                    alt="QR Code PIX" class="qrPix">
+
+                <p class="chavePix">Chave PIX: contato@vinilderua.com.br</p>
+            </div>
+            <div id="areaCartao" style="display:none;">
+                <!-- Seu formulário futuro de cartão -->
+            </div>
+
+            <div id="areaBoleto" style="display:none;">
+                <h3>Boleto gerado</h3>
+                <p>Ao finalizar, você será redirecionado.</p>
+            </div>
+
+
+
+
         </section>
 
         <footer id="contato">
@@ -197,6 +217,7 @@
     <script src="/src/assets/scripts/loading.js"></script>
     <script src="/src/assets/scripts/carrinho.js"></script>
     <script src="/src/assets/scripts/conexão.js"></script>
+    <script src="/src/assets/scripts/resumoCompra.js"></script>
 
 
 </body>
