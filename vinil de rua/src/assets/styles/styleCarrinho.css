@@ -354,7 +354,7 @@ header.scrolled .icons img {
 footer {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   padding: 30px 45px;
   width: 100%;
   background-color: #4C4C4C;
@@ -384,7 +384,7 @@ footer {
 }
 
 .avisosFooter {
-  position: absolute; 
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -399,15 +399,16 @@ footer {
   margin-top: 20px;
   text-decoration: underline;
   font-family: var(--fonteTerciaria);
-  color: #ffffffff;
+  color: #fff;
   font-size: 22px;
-  position: absolute; 
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
-
+  cursor: pointer;
+  z-index: 9999;
 }
 
 
@@ -468,4 +469,70 @@ footer {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+/* overlay */
+#popupOverlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  /* garante que fique acima da página */
+}
+
+/* caixa */
+#popupBox {
+  width: 80%;
+  max-width: 720px;
+  max-height: 80vh;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* conteúdo com scroll interno */
+.popupContent {
+  max-height: calc(80vh - 50px);
+  overflow-y: auto;
+  padding-right: 8px;
+  white-space: normal;
+  /* permite quebra de linha automática */
+  text-align: justify;
+  /* deixa o texto justificado */
+  word-wrap: break-word;
+  /* quebra palavras muito grandes */
+  line-height: 1.6;
+  /* melhora a leitura */
+}
+
+
+/* botão fechar */
+#closePopup {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* garantia: make link clickable even if algo cobre */
+#openTerms {
+  position: relative;
+  z-index: 99999;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Previna que algo invisível capture cliques (debug) */
+.noPointer {
+  pointer-events: none;
 }

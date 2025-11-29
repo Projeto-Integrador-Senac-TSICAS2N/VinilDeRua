@@ -4,7 +4,8 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-a*{
+
+a* {
   text-decoration: none;
 }
 
@@ -194,10 +195,10 @@ main {
 */
 
 .fundoPrincipal {
-  position: relative;                
+  position: relative;
   height: auto;
   width: 100%;
-  background: var(--gradienteVertical2); 
+  background: var(--gradienteVertical2);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -206,28 +207,46 @@ main {
 .fundoPrincipal::before {
   content: "";
   position: absolute;
-  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  inset: 0;
+  /* top:0; right:0; bottom:0; left:0; */
   background-image: url("https://i.ibb.co/FqY6YvNf/fundo-Muro-Tijolo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.6; 
+  opacity: 0.6;
   z-index: 0;
 }
 
-.fundoPrincipal > * {
+.fundoPrincipal>* {
   position: relative;
   z-index: 1;
 }
 
-.offECatalogo{
+.offECatalogo {
   display: flex;
   justify-content: center;
   gap: 85px;
-  
+  align-items: flex-start;
+
 }
 
-.offECatalogo .cardOff{
+.catalogoIndex.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cardOff .closeCard {
+  top: 10px;
+  right: 10px;
+  background-color: #838383;
+  border: none;
+  border-radius: 255px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+
+.offECatalogo .cardOff {
   margin-top: 100px;
   background-color: var(--gradienteCards);
   border: 1.5px solid #000000;
@@ -238,7 +257,7 @@ main {
   height: 510px;
 }
 
-.cardDiscoOff{
+.cardDiscoOff {
   border: 2px solid none;
   background: var(--gradienteCardDiscos);
   font-family: var(--fontePrimaria);
@@ -254,12 +273,12 @@ main {
   margin-bottom: 40px;
 }
 
-.cardDiscoOff .offDisco{
+.cardDiscoOff .offDisco {
   font-size: 25px;
   color: #ff0000;
 }
 
-.offECatalogo .cardOff .offEimg{
+.offECatalogo .cardOff .offEimg {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -268,12 +287,12 @@ main {
   font-family: var(--fontePrimaria);
 }
 
-.cardOff{
+.cardOff {
   font-family: var(--fontePrimaria);
 }
 
 
-.offEimg{
+.offEimg {
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -282,27 +301,27 @@ main {
 }
 
 .offEimg a {
-  display: inline-block; 
+  display: inline-block;
   margin: 0;
-  text-decoration: underline; 
+  text-decoration: underline;
   text-align: left;
   color: #241f70;
 }
 
-.offEimg > * {
+.offEimg>* {
   align-self: flex-start;
 }
 
-.offEimg h1{
+.offEimg h1 {
   font-size: 30px;
 }
 
-.linkEImg{
+.linkEImg {
   display: flex;
   gap: 20px;
 }
 
-.cardOff .listaDiscos{
+.cardOff .listaDiscos {
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #4E4E4E #989898;
@@ -471,15 +490,15 @@ main {
   transition: 0.2s ease-in;
 }
 
-.categorias button{
+.categorias button {
   border: none;
   background-color: none;
   border-radius: 10px;
   cursor: pointer;
-  
+
 }
 
-.cardCategorias:hover{
+.cardCategorias:hover {
   transform: scale(1.08);
   box-shadow: var(--dropShadowDiscos);
 }
@@ -597,16 +616,15 @@ footer {
 
 
 
-.card
-
-.listaDiscos {
-  width: 300px;          
-  height: 200px;        
-  overflow-y: auto;     
+.card .listaDiscos {
+  width: 300px;
+  height: 200px;
+  overflow-y: auto;
   border: 2px solid #ccc;
   padding: 10px;
   scrollbar-width: thin;
 }
+
 .disco {
   background: #eee;
   margin-bottom: 10px;
