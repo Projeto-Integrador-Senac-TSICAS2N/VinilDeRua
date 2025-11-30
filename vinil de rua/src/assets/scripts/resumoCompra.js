@@ -22,12 +22,10 @@ function realizarPagamento() {
 
     mostrarAreaPagamento(selectedMethod);
 
-    // 🔒 BLOQUEAR troca após clicar no botão
     pagamentoBloqueado = true;
     bloquearOpcoesPagamento();
 }
 
-// Mostrar área escolhida SOMENTE após clicar no botão
 function mostrarAreaPagamento(method) {
     const areaPix = document.getElementById("areaPix");
     const areaCartao = document.getElementById("areaCartao");
@@ -42,7 +40,6 @@ function mostrarAreaPagamento(method) {
     if (method === "boleto" && areaBoleto) areaBoleto.style.display = "block";
 }
 
-// 🔒 Função que trava os checkboxes
 function bloquearOpcoesPagamento() {
     payMethods.forEach(method => {
         method.disabled = true;
