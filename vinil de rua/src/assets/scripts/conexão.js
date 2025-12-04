@@ -1,11 +1,9 @@
-// Função para gerar um ID aleatório de 8 dígitos
 function gerarIdAleatorio() {
     return Math.floor(10000000 + Math.random() * 90000000).toString();
 }
 
 document.querySelectorAll('.addCarrinho').forEach(btn => {
     btn.addEventListener('click', function(event) {
-        // Sobe até o card do produto
         const card = btn.closest('.cardDisco');
         const imgProduto = card.querySelector('.imgCard').src;
         const tituloProduto = card.querySelector('.nomeDisco').innerText;

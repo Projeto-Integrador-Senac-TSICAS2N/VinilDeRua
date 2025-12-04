@@ -151,7 +151,6 @@ header.scrolled .icons img {
 
 .imgProduto img {
   width: 100%;
-  max-width: 900px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -200,9 +199,8 @@ header.scrolled .icons img {
   display: flex;
   justify-content: center;
   gap: 50px;
-  margin:  100px;
+  margin: 100px;
   padding: 150px;
-  border: 2px solid red;
 }
 
 .infosProduto {
@@ -224,18 +222,18 @@ header.scrolled .icons img {
 }
 
 .finalizarCompra {
-  align-self: flex-end; 
-  margin-top: auto; 
+  align-self: flex-end;
+  margin-top: auto;
   text-align: right;
   font-family: var(--fontePrimaria);
 }
 
-.finalizarCompra p{
+.finalizarCompra p {
   font-size: 26px;
   margin-bottom: 15px;
 }
 
-.finalizarCompra button{
+.finalizarCompra button {
   border-radius: 3px;
   border: 1px solid #000000;
   padding: 6px 18px;
@@ -247,7 +245,7 @@ header.scrolled .icons img {
   transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
 
-.finalizarCompra button:hover{
+.finalizarCompra button:hover {
   background-color: #acacac;
   color: #ffffff;
   border: 2.2px solid #ffffff;

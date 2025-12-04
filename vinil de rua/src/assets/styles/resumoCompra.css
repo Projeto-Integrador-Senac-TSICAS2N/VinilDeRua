@@ -335,6 +335,13 @@ header.scrolled .icons img {
     padding: 10px;
 }
 
+
+.cardFiado{
+    position: relative;
+    transition: transform 0.2s ease;
+    z-index: 900;
+}
+
 .fazerPagamento button {
     border-radius: 3px;
     border: 1px solid #000000;
@@ -365,6 +372,8 @@ header.scrolled .icons img {
     padding: 10px;
     border-radius: 8px;
 }
+
+
 
 
 
