@@ -414,7 +414,6 @@ footer {
 
 
 
-
 .socialConteiner {
   display: flex;
   justify-content: center;
@@ -471,7 +470,6 @@ footer {
   gap: 15px;
 }
 
-/* overlay */
 #popupOverlay {
   display: none;
   position: fixed;
@@ -480,7 +478,6 @@ footer {
   justify-content: center;
   align-items: center;
   z-index: 2000;
-  /* garante que fique acima da página */
 }
 
 /* caixa */
@@ -496,19 +493,14 @@ footer {
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* conteúdo com scroll interno */
 .popupContent {
   max-height: calc(80vh - 50px);
   overflow-y: auto;
   padding-right: 8px;
   white-space: normal;
-  /* permite quebra de linha automática */
   text-align: justify;
-  /* deixa o texto justificado */
   word-wrap: break-word;
-  /* quebra palavras muito grandes */
   line-height: 1.6;
-  /* melhora a leitura */
 }
 
 
@@ -524,7 +516,6 @@ footer {
   line-height: 1;
 }
 
-/* garantia: make link clickable even if algo cobre */
 #openTerms {
   position: relative;
   z-index: 99999;
@@ -532,7 +523,6 @@ footer {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Previna que algo invisível capture cliques (debug) */
 .noPointer {
   pointer-events: none;
 }

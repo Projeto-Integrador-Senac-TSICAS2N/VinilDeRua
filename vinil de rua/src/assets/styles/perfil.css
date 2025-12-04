@@ -1,0 +1,485 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* fontes */
+    --fontePrimaria: 'Caesar Dressing', cursive;
+    --fonteSecundaria: 'Anton', sans-serif;
+    --fonteTerciaria: "Young Serif", serif;
+    /* Cores */
+    --gradienteVertical1: linear-gradient(180deg, rgba(191, 191, 191, 1) 0%, rgba(81, 81, 81, 1) 100%);
+    --gradienteVertical2: linear-gradient(180deg, rgba(81, 81, 81, 1) 0%, rgba(191, 191, 191, 1) 100%);
+    --gradienteCardDiscos: linear-gradient(-41deg, rgba(159, 159, 159, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    /* drop shadow discos */
+    --dropShadowDiscos: box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.404);
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+header {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    justify-content: space-between;
+    background-color: #7E7E7E;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+nav {
+    display: flex;
+    gap: 78px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: "Caesar Dressing", system-ui;
+    font-size: 32px;
+    transition: color 0.8 ease-in-out;
+}
+
+header img {
+    width: 87px;
+    height: 87px;
+}
+
+.logoHeader {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    font-family: "Anton", sans-serif;
+    font-size: 35px;
+    transition: color 0.8 ease-in-out;
+}
+
+.logoHeader a {
+    text-decoration: none;
+}
+
+.logoHeader p {
+    margin-left: 7px;
+}
+
+header .icons img {
+    width: 47px;
+    height: 47px;
+    filter: brightness(0) invert(1);
+    /* deixa branco */
+    transition: filter 0.8 ease-in-out;
+}
+
+.icons {
+    display: flex;
+    gap: 14px;
+}
+
+
+/* ===== ESTADO APÓS ROLAR ===== */
+
+header.scrolled {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.404);
+    padding: 0 25px;
+}
+
+header.scrolled .logoHeader img {
+    content: url("https://i.ibb.co/RknvXKX2/logo-Vinil-De-Rua-preta.png");
+    width: 87px;
+    height: 87px;
+}
+
+header.scrolled .logoHeader p {
+    color: #000000;
+}
+
+header.scrolled nav a {
+    color: #000000;
+}
+
+header.scrolled .logoHeader img {
+    color: #000000;
+}
+
+header.scrolled .icons img {
+    filter: brightness(0);
+}
+
+.fundoPrincipal {
+    background: var(--gradienteVertical2);
+}
+
+
+.saudacaoUser {
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.saudacaoUser h1{
+    font-size: 65px;
+    font-family: var(--fontePrimaria);
+}
+
+hr {
+    width: 885px;
+    margin: 10px auto 30px auto;
+    border: none;
+    border-top: 5px solid #FFFFFF;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.cardsPerfil {
+    width: 885px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* Botões - você estiliza depois */
+.cardsPerfil button{
+    width: 100%;
+    height: 130px;
+    border-radius: 12px;
+    background: #f5f5f5;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.cardsPerfil button:hover{
+    background-color: #acacac;
+    color: #ffffff;
+    border: 2.2px solid #ffffff;
+    transform: scale(1.0);
+    box-shadow: 12px 12px 12px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cardPerfil h1 {
+    font-size: 20px;
+    font-family: var(--fontePrimaria);
+}
+
+
+/* info do usuario */
+
+.cardsInfos {
+    width: 885px;
+    gap: 70px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cardInfoUser {
+    background-color: #FFFFFF;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.tituloEditar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+    color: #000000;
+    font-family: var(--fontePrimaria);
+}
+
+.tituloEditar h1 {
+    font-size: 20px;
+}
+
+.tituloEditar a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+
+.tituloEditar a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #1b1b1b;
+    transition: width 0.3s ease-in-out;
+}
+
+.tituloEditar a:hover::after {
+    width: 100%;
+}
+
+
+
+.cardInfoUser p {
+    font-size: 16px;
+    display: flex;
+    font-family: var(--fonteTerciaria);
+    font-weight: 100;
+}
+
+main{
+    flex: 1;
+    height: 100vh;
+}
+
+
+
+/* parte minhas compras */
+
+
+
+
+
+
+.itensCarrinho {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 65px;
+  justify-content: center;
+  font-family: var(--fonteTerciaria);
+  margin: 0 310px;
+}
+
+.itemCar {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  background-color: #D9D9D9;
+}
+
+.itemCar .imgCar {
+  border: 2.5px solid #000000;
+  padding: 8px 5px;
+  border-radius: 0 100px 100px 0;
+}
+
+.itemCar .infoCarrinho {
+  border: 2.5px solid #000000;
+  padding: 15px 34px;
+  display: flex;
+  gap: 40px;
+}
+
+
+
+.itemCar .infoCarrinho .info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0 10px;
+}
+
+
+.infoQuantidade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 45px;
+    width: 100%;
+    background-color: #4C4C4C;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.footerLogo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footerLogo img {
+    width: 88px;
+    height: 88px;
+}
+
+.footerLogo h1 {
+    font-family: var(--fonteSecundaria);
+    font-size: 24px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    line-height: 35px;
+    display: flex;
+    align-items: end;
+}
+
+.avisosFooter {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-family: var(--fonteTerciaria);
+    font-size: 22px;
+}
+
+.termos a {
+    margin-top: 20px;
+    text-decoration: underline;
+    font-family: var(--fonteTerciaria);
+    color: #fff;
+    font-size: 22px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.socialConteiner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: var(--fonteTerciaria);
+    margin-right: 335px;
+}
+
+.socialConteiner hr {
+    margin-top: 16px;
+    margin-bottom: 11px;
+}
+
+.social {
+    font-size: 24px;
+    margin-top: 23px;
+    margin-bottom: 15px;
+}
+
+.socialLogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.socialLogo img {
+    max-width: 30px;
+}
+
+.copyrightVdR {
+    display: flex;
+    justify-content: center;
+    font-family: var(--fonteTerciaria);
+    font-size: 24px;
+    margin-top: 90px;
+}
+
+.footerCtt h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.formasPagamento hr {
+    margin-top: 16px;
+    margin-bottom: 11px;
+}
+
+.formasPagamentoImg {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#popupOverlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    /* garante que fique acima da página */
+}
+
+#popupBox {
+    width: 80%;
+    max-width: 720px;
+    max-height: 80vh;
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+}
+
+.popupContent {
+    max-height: calc(80vh - 50px);
+    overflow-y: auto;
+    padding-right: 8px;
+    white-space: normal;
+    text-align: justify;
+    word-wrap: break-word;
+    line-height: 1.6;
+}
+
+
+#closePopup {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+#openTerms {
+    position: relative;
+    z-index: 99999;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.noPointer {
+    pointer-events: none;
+}
