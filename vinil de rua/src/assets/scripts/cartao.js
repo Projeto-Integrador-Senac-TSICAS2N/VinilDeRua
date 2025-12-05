@@ -103,7 +103,7 @@ var expirationdate_mask = new IMask(expirationdate, {
 
 //Mask the security code
 var securitycode_mask = new IMask(securitycode, {
-    mask: '0000',
+    mask: '000',
 });
 
 // SVGICONS
@@ -196,24 +196,6 @@ cardnumber_mask.on("accept", function () {
 
 
 
-//Generate random card number from list of known test numbers
-const randomCard = function () {
-    let testCards = [
-        '4000056655665556',
-        '5200828282828210',
-        '371449635398431',
-        '6011000990139424',
-        '30569309025904',
-        '3566002020360505',
-        '6200000000000005',
-        '6759649826438453',
-    ];
-    let randomNumber = Math.floor(Math.random() * testCards.length);
-    cardnumber_mask.unmaskedValue = testCards[randomNumber];
-}
-generatecard.addEventListener('click', function () {
-    randomCard();
-});
 
 
 // CREDIT CARD IMAGE JS
@@ -229,8 +211,8 @@ document.querySelector('.creditcard').addEventListener('click', function () {
 //On Input Change Events
 name.addEventListener('input', function () {
     if (name.value.length == 0) {
-        document.getElementById('svgname').innerHTML = 'John Doe';
-        document.getElementById('svgnameback').innerHTML = 'John Doe';
+        document.getElementById('svgname').innerHTML = 'Lázaro Barbosa';
+        document.getElementById('svgnameback').innerHTML = 'Lázaro Barbosa';
     } else {
         document.getElementById('svgname').innerHTML = this.value;
         document.getElementById('svgnameback').innerHTML = this.value;

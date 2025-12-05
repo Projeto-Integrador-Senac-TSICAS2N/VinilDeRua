@@ -309,6 +309,13 @@ header.scrolled .icons img {
 }
 
 
+.formasPagamento h1 {
+    font-family: var(--fonteTerciaria);
+    font-weight: 100;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
 .circleCheckbox {
     display: flex;
     align-items: center;
