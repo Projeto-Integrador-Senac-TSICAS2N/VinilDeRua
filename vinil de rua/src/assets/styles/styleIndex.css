@@ -88,17 +88,76 @@ header img {
   margin-left: 7px;
 }
 
-header .icons img {
-  width: 47px;
-  height: 47px;
-  filter: brightness(0) invert(1);
-  /* deixa branco */
-  transition: filter 0.8 ease-in-out;
+.icons img {
+  cursor: pointer;
 }
 
-.icons {
+/* Fundo escuro */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.5);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.3s;
+  z-index: 998;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+
+  width: 400px;
+  max-width: 90%;
+  height: 100vh;
+
+  background: #fff;
+
+  box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+
+  transition: 0.3s ease;
+  z-index: 999;
+
   display: flex;
-  gap: 14px;
+  flex-direction: column;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebar-header button {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.sidebar-content {
+  padding: 20px;
+  overflow-y: auto;
 }
 
 /* ===== ESTADO APÓS ROLAR ===== */
