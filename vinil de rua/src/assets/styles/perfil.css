@@ -125,20 +125,11 @@ header.scrolled .icons img {
 }
 
 .fundoPrincipal {
-    background: var(--gradienteVertical2);
+    background: #FDFDFD;
 }
 
 
-.saudacaoUser {
-    padding-top: 150px;
-    display: flex;
-    justify-content: center;
-}
 
-.saudacaoUser h1 {
-    font-size: 65px;
-    font-family: var(--fontePrimaria);
-}
 
 hr {
     width: 885px;
@@ -149,39 +140,9 @@ hr {
     margin-bottom: 20px;
 }
 
-.secoesUser{
-    font-family: var(--fonteSecundaria);
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-.secoesUser a{
-    text-decoration: none;
-    color: #e6e6e6;
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-}
-
-.secoesUser a::after{
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #1b1b1b;
-    transition: width 0.3s ease-in-out;
-}
-
-.secoesUser a:hover::after{
-    width: 100%;
-}
 
 
-.tituloPag{
+.tituloPag {
     font-family: var(--fontePrimaria);
     justify-content: center;
     display: flex;
@@ -189,7 +150,7 @@ hr {
     margin-bottom: 20px;
 }
 
-.tituloPag:hover{
+.tituloPag:hover {
     transform: scale(1.1);
 
 }
@@ -238,71 +199,101 @@ hr {
 
 /* info do usuario */
 
-.cardsInfos {
-    width: 885px;
-    gap: 70px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.secoesUser{
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #FDFDFD;
+    width: 860px;
+    padding: 10px;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+
 }
 
-.cardInfoUser {
-    background-color: #FFFFFF;
-    width: auto;
-    height: auto;
-    padding: 20px;
+.linksSecao{
+    display: flex;
+    gap: 50px;
+}
+
+.infoUser {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    border: 1px solid #000000;
-    border-radius: 5px;
+    gap: 35px;
+    align-items: center;
+    justify-content: center;
 }
 
-.tituloEditar {
+.saudacaoUser {
+    margin-top: 150px;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 15px;
+    justify-content: center;
+    background-color: #DBDBDB;
+    padding: 10px;
+    opacity: 30%;
+    border-radius: 10px;
+
+}
+
+.saudacaoUser h1 {
     color: #000000;
+    font-size: 25px;
     font-family: var(--fontePrimaria);
 }
 
-.tituloEditar h1 {
-    font-size: 20px;
-}
-
-.tituloEditar a {
-    font-size: 20px;
-    text-decoration: none;
-    color: #000000;
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-}
-
-
-.tituloEditar a::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #1b1b1b;
-    transition: width 0.3s ease-in-out;
-}
-
-.tituloEditar a:hover::after {
-    width: 100%;
-}
-
-
-
-.cardInfoUser p {
-    font-size: 16px;
+.lado1E2 {
     display: flex;
-    font-family: var(--fonteTerciaria);
-    font-weight: 100;
+    gap: 50px;
+    align-items: start;
+    color: #000000;
+}
+
+.lado1User {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: start;
+}
+
+.campoInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.campoCom2 {
+    display: flex;
+    gap: 75px;
+}
+
+.lado2User {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: start;
+
+}
+
+.botaoEdit {
+    background-color: #818181;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.botaoEdit button{
+    background-color: #000000;
+    color: #dadada;
+    border-radius: 5px;
+    padding: 5px 15px;
+    border: none;
+}
+
+
+.botaoEdit button:hover{
+    background-color: transparent;
+    border: 1px solid #000000;
+    color: #000000;
 }
 
 main {

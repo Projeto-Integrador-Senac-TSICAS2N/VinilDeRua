@@ -22,21 +22,21 @@ function openSidebar(type) {
     sidebar.classList.add("active");
     overlay.classList.add("active");
 
-    if (type === "cart") {
-        title.innerText = "Carrinho";
+    // if (type === "cart") {
+    //     title.innerText = "Carrinho";
 
-        content.innerHTML = `
-                <p>Seu carrinho está vazio.</p>
-            `;
-    }
+    //     content.innerHTML = `
+    //             <p>Seu carrinho está vazio.</p>
+    //         `;
+    // }
 
-    if (type === "wishlist") {
-        title.innerText = "Wishlist";
+    // if (type === "wishlist") {
+    //     title.innerText = "Wishlist";
 
-        content.innerHTML = `
-                <p>Você ainda não possui favoritos.</p>
-            `;
-    }
+    //     content.innerHTML = `
+    //             <p>Você ainda não possui favoritos.</p>
+    //         `;
+    // }
 }
 
 function closeSidebar() {
