@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações Pessoais</title>
+    <!-- FONTES USADASS -->
+    <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+    <!-- SEPARAÇÃO -->
+    <link rel="stylesheet" href="/src/assets/styles/perfil.css">
+    <link rel="shortcut icon" type="imagex/png" href="/src/assets/images/logoVinilDeRua.svg">
+
+</head>
+
+<body>
+
+    <div id="preloader">
+        <img src="https://i.ibb.co/qYwvJYpw/loading.gif" alt="loading" border="0">
+    </div>
+
+    <header>
+        <div class="logoHeader">
+            <a href="/index.html"><img src="https://i.ibb.co/zhNXFH1t/logo-Vinil-De-Rua-branca.png"
+                    alt="logo-Vinil-De-Rua" border="0"></a>
+            <p>VINIL <br>DE RUA</p>
+        </div>
+        <nav>
+            <a href="/index.html#catalogo">Cátalogo</a>
+            <a href="/src/assets/pages/pageOff.html#catalogoOff">Ofertas</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <div class="icons">
+            <a href="/src/assets/pages/favorito.html"><img src="https://i.ibb.co/ynVyBhq2/favorite.png"
+                    alt="favorite"></a>
+            <a href="/src/assets/pages/carrinho.html"><img src="https://i.ibb.co/JRf4dtY8/shopping-cart.png"
+                    alt="shopping-cart"></a>
+            <a href="/src/assets/pages/perfilUsuario.html"><img src="https://i.ibb.co/4RGqW28z/account-circle.png"
+                    alt="account-circle"></a>
+        </div>
+    </header>
+
+
+    <section class="fundoPrincipal">
+        <main>
+
+            <hr>
+
+            <div class="secoesUser">
+                <h1>Perfil/ <span>Meu Perfil</span> </h1>
+                <div class="linksSecao">
+
+                    <a href="/src/assets/pages/infoUserEdit.html" class="pageOff">Gerenciar minha Conta</a>
+                    <a href="/src/assets/pages/meusPedidos.html" class="pageOff">Meus Pedidos</a>
+                    <a href="/src/assets/pages/vistoRecente.html" class="pageOn">Vistos Recentemente</a>
+
+                </div>
+            </div>
+
+            <section class="vistoRecente">
+                <div class="recente2Lados">
+
+                    <div class="recenteLado1">
+                        <h1>Discos Recentes</h1>
+                        <div class="discosRecentes">
+
+                            <div class="cardDisco">
+                                <img src="https://i.ibb.co/wrN6N3y8/sosLP.png" alt="Capa do álbum SOS - SZA"
+                                    class="imgCard">
+                                <div class="infoDisco">
+                                    <p class="nomeDisco">SOS - SZA</p>
+                                    <p class="precoDisco">R$ 430</p>
+                                </div>
+                                <div class="preçoEFavDisco">
+                                    <button class="btnComprarAgora" onclick="selecionarProduto({id: 1,titulo: 'SOS - SZA',img: 'https://i.ibb.co/wrN6N3y8/sosLP.png',preco: 430})">Comprar agora</button>
+                                    <div class="cart">
+                                        <button class="addCarrinho">
+                                            <img src="https://i.ibb.co/6RFY694G/add-shopping-cart-1.png" alt="carrinho">
+                                        </button>
+                                    </div>
+                                    <div class="favorite">
+                                        <a href="/src/assets/pages/favorito.html">
+                                            <img src="https://i.ibb.co/5mHR0sq/favorite-Black.png" alt="favorito">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="cardDisco">
+                                <img src="https://i.ibb.co/PsWFFQdv/blond-Vinyl.png"
+                                    alt="Capa do álbum Blonde - Frank Ocean" class="imgCard">
+                                <div class="infoDisco">
+                                    <p class="nomeDisco">Blonde - Frank Ocean</p>
+                                    <p class="precoDisco">R$ 500</p>
+                                </div>
+                                <div class="preçoEFavDisco">
+                                    <button class="btnComprarAgora" onclick="selecionarProduto({id: 2,titulo: 'Blonde - Frank Ocean',img: 'https://i.ibb.co/PsWFFQdv/blond-Vinyl.png',preco: 500})">Comprar agora</button>
+                                    <div class="cart">
+                                        <button class="addCarrinho">
+                                            <img src="https://i.ibb.co/6RFY694G/add-shopping-cart-1.png" alt="carrinho">
+                                        </button>
+                                    </div>
+                                    <div class="favorite">
+                                        <a href="/src/assets/pages/favorito.html">
+                                            <img src="https://i.ibb.co/5mHR0sq/favorite-Black.png" alt="favorito">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="cardDisco">
+                                <img src="https://i.ibb.co/ccjr6sXh/deParaLP.png" alt="Capa do álbum De: Para: - Sant"
+                                    class="imgCard">
+                                <div class="infoDisco">
+                                    <p class="nomeDisco">De: Para: - Sant</p>
+                                    <p class="precoDisco">R$ 100</p>
+                                </div>
+                                <div class="preçoEFavDisco">
+                                    <button class="btnComprarAgora" onclick="selecionarProduto({id: 3,titulo: 'De: Para: - Sant',img: 'https://i.ibb.co/ccjr6sXh/deParaLP.png',preco: 100})">Comprar agora</button>
+                                    <div class="cart">
+                                        <button class="addCarrinho">
+                                            <img src="https://i.ibb.co/6RFY694G/add-shopping-cart-1.png" alt="carrinho">
+                                        </button>
+                                    </div>
+                                    <div class="favorite">
+                                        <a href="/src/assets/pages/favorito.html"><img
+                                                src="https://i.ibb.co/5mHR0sq/favorite-Black.png" alt="favorito"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cardDisco">
+                                <img src="https://i.ibb.co/jZq6YsFN/amlLP.png"
+                                    alt="Capa do  álbum Awaken, my love - Childish Gambino" class="imgCard">
+                                <div class="infoDisco">
+                                    <p class="nomeDisco">Awaken, my love - Childish Gambino</p>
+                                    <p class="precoDisco">R$ 275</p>
+                                </div>
+                                <div class="preçoEFavDisco">
+                                    <button class="btnComprarAgora" onclick="selecionarProduto({id: 4,titulo: 'Awaken, my love - Childish Gambino',img: 'https://i.ibb.co/jZq6YsFN/amlLP.png',preco: 275})">Comprar agora</button>
+                                    <div class="cart">
+                                        <button class="addCarrinho">
+                                            <img src="https://i.ibb.co/6RFY694G/add-shopping-cart-1.png" alt="carrinho">
+                                        </button>
+                                    </div>
+                                    <div class="favorite">
+                                        <a href="/src/assets/pages/favorito.html">
+                                            <img src="https://i.ibb.co/5mHR0sq/favorite-Black.png" alt="favorito">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="recenteLado2">
+                        <h1>Categorias Recentes</h1>
+                        <div class="categoriasRecentes">
+
+                            <button class="cardCategorias"
+                                onclick="window.open('src/assets/pages/grimeCategoria.html', '_self')">
+                                <img src="https://i.ibb.co/vCmKYsJF/grimeImg.png" alt="Imagem categoria Grime">
+                                <span>
+                                    <p>GRIME</p>
+                                </span>
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+        <footer id="contato">
+            <div class="footerLogo">
+                <img src="https://i.ibb.co/zhNXFH1t/logo-Vinil-De-Rua-branca.png" alt="Vinil de Rua" class="logo">
+                <h1>VINIL <br>DE RUA</h1>
+            </div>
+
+            <div class="avisosFooter">
+                <p>Duvidas? (11) 4002-8922 (SP)</p>
+                <p>Seg a Sex, 9h às 21h Sáb 10h às 18h</p>
+            </div>
+
+            <div class="termos">
+                <a id="openTerms" style="cursor: pointer;">Termos e Condições</a>
+            </div>
+        </footer>
+        <div id="popupOverlay" aria-hidden="true">
+            <div id="popupBox" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+                <button id="closePopup" aria-label="Fechar popup">&times;</button>
+                <div class="popupContent">
+                    <h2 id="popupTitle">Termos e Condições</h2>
+                    <p># **Termos e Condições de Uso – Vinil de Rua**
+
+                        **Última atualização: 21 de novembro de 2025**
+
+                        Site oficial: [**https://vinilderua.com**](https://vinilderua.com/)
+
+                        ---
+
+                        ## **1. Sobre o Vinil de Rua**
+
+                        O Vinil de Rua é um **e-commerce especializado em discos de vinil, vitrolas e conhecimentos
+                        musicais**.
+
+                        Todas as vendas realizadas no site são feitas **diretamente pelo Vinil de Rua**, não havendo
+                        intermediação de terceiros ou ambiente de marketplace.
+
+                        ---
+
+                        ## **2. Aceitação dos Termos**
+
+                        Ao acessar ou comprar no Vinil de Rua, você concorda com:
+
+                        - Estes Termos e Condições
+                        - Nossa Política de Privacidade
+                        - Nossas políticas de pagamento, entrega e trocas/devoluções
+
+                        Caso não concorde, não utilize o site.
+
+                        Podemos atualizar estes Termos periodicamente, sempre mantendo a versão mais recente em
+                        **vinilderua.com/termos**.
+
+                        ---
+
+                        ## **3. Uso do Site**
+
+                        O usuário se compromete a:
+
+                        - Não utilizar o site para fins ilegais
+                        - Não tentar acessar partes restritas ou sistemas internos
+                        - Não tentar interferir no funcionamento do site
+                        - Não reproduzir, copiar ou explorar conteúdo sem autorização
+
+                        ---
+
+                        ## **4. Cadastro e Conta**
+
+                        O cadastro é opcional, mas facilita o acompanhamento de pedidos.
+
+                        Ao se cadastrar, o usuário declara que:
+
+                        - Forneceu informações reais e atualizadas
+                        - É responsável pela segurança da senha
+                        - Não compartilhará seus dados de acesso
+
+                        Contas podem ser suspensas em caso de uso fraudulento, tentativa de golpe ou descumprimento
+                        destes Termos.
+
+                        ---</p>
+                    <p>## **5. Produtos e Estoque**
+
+                        Trabalhamos com:
+
+                        - Novos e usados (quando aplicável)
+                        - Produtos com descrição, fotos e informações reais
+
+                        O Vinil de Rua se compromete a:
+
+                        - Manter informações atualizadas
+                        - Informar claramente quando um produto é usado
+                        - Descrever estado, prensagem ou edição da melhor forma possível
+
+                        Como trabalhamos com itens muitas vezes únicos, especialmente usados, o produto pode se esgotar
+                        rapidamente. A compra só é confirmada após o pagamento aprovado.
+
+                        ---
+
+                        ## **6. Preços e Pagamentos**
+
+                        Os preços exibidos no site:
+
+                        - Estão em reais (BRL)
+                        - Podem ser alterados sem aviso prévio
+                        - Podem conter promoções ou cupons por tempo limitado
+
+                        Aceitamos pagamentos por:
+
+                        - Cartão de crédito
+                        - Pix
+                        - Boleto bancário (se ativado)
+                        - Outras soluções de pagamento exibidas no checkout
+
+                        Pagamentos são processados por plataformas externas (como Mercado Pago, Stripe, PagSeguro etc.).
+                        Essas plataformas podem ter seus próprios termos e políticas.
+
+                        ---
+
+                        ## **7. Envio, Prazos e Entregas**
+
+                        Os envios são realizados por:
+
+                        - Correios
+                        - Transportadoras parceiras (quando aplicável)
+
+                        O prazo de entrega exibido no site é estimado.
+
+                        Após o envio, o usuário recebe o código de rastreamento.
+
+                        Não nos responsabilizamos por atrasos causados por:
+
+                        - Greves
+                        - Problemas nos Correios
+                        - Eventos climáticos
+                        - Dificuldades de entrega no endereço fornecido
+
+                        Caso o pedido retorne por **endereço incorreto ou ausência do destinatário**, poderá haver
+                        cobrança de novo frete para reenvio.
+
+                        ---
+
+                        ## **8. Trocas e Devoluções**
+
+                        O usuário tem direito a solicitar:
+
+                        ### **Devolução (arrependimento) – 7 dias corridos**
+
+                        Conforme o Código de Defesa do Consumidor.
+
+                        ### **Troca por defeito – 30 dias**
+
+                        Se o disco, CD ou item apresentar defeito não informado.
+
+                        Itens devem ser enviados:
+
+                        - Na embalagem original
+                        - Sem sinais de mau uso
+                        - Com todos os acessórios (se aplicável)
+
+                        Não aceitamos devolução de:
+
+                        - Discos usados cuja condição já foi claramente descrita
+                        - Produtos danificados por mau uso
+                        - Itens lacrados que foram abertos, salvo defeito
+
+                        ---
+
+                        ## **9. Limitação de Responsabilidade**
+
+                        O Vinil de Rua não se responsabiliza por:
+
+                        - Uso incorreto dos produtos
+                        - Perdas causadas por terceiros (ex: transportadora)
+                        - Informações inseridas incorretamente pelo cliente no cadastro ou no endereço
+                        - Atrasos ou erros decorrentes de serviços externos (pagamentos, logística, etc.)
+
+                        ---
+
+                        ## **10. Propriedade Intelectual**
+
+                        Todo o conteúdo de **vinilderua.com** — textos, fotos, vídeos, logotipo, layout, código e
+                        descrições — é protegido por direitos autorais.
+
+                        É proibido:
+
+                        - Copiar conteúdos
+                        - Reproduzir fotos ou descrições
+                        - Usar a marca Vinil de Rua sem autorização
+
+                        ---
+
+                        ## **11. Privacidade e Segurança**
+
+                        Tratamos dados pessoais conforme nossa **Política de Privacidade**, disponível em:
+
+                        ➡️ **vinilderua.com/privacidade**
+
+                        Coletamos apenas o necessário para processar pedidos, proporcionar uma boa experiência de
+                        navegação e cumprir obrigações legais.
+
+                        ---
+
+                        ## **12. Cancelamentos de Pedidos**
+
+                        O Vinil de Rua pode cancelar pedidos em caso de:
+
+                        - Falta de estoque
+                        - Erro de preço evidente
+                        - Suspeita de fraude
+                        - Pagamento não aprovado
+
+                        Em cenários de cancelamento por parte da loja, o cliente será integralmente reembolsado.
+
+                        ---
+
+                        ## **13. Foro e Lei Aplicável**
+
+                        Este documento é regido pelas leis brasileiras.
+
+                        Disputas serão resolvidas no **Foro da Comarca de São Paulo – SP**, salvo quando o consumidor
+                        optar pelo foro de seu domicílio, conforme o CDC.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="/src/assets/scripts/navbar.js"></script>
+    <script src="/src/assets/scripts/loading.js"></script>
+    <script src="/src/assets/scripts/carrinho.js"></script>
+    <script src="/src/assets/scripts/conexão.js"></script>
+    <script src="/src/assets/scripts/popup.js"></script>
+
+</body>
+
+</html>

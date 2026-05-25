@@ -37,7 +37,7 @@ header {
     align-items: center;
     padding: 0 25px;
     justify-content: space-between;
-    background-color: #7E7E7E;
+    background-color: #1D1D1D;
     position: fixed;
     top: 0;
     left: 0;
@@ -128,78 +128,9 @@ header.scrolled .icons img {
     background: #FDFDFD;
 }
 
+/* NAVEGAÇÃO DO PERFIL */
 
-
-
-hr {
-    width: 885px;
-    margin: 10px auto 30px auto;
-    border: none;
-    border-top: 5px solid #FFFFFF;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-
-
-.tituloPag {
-    font-family: var(--fontePrimaria);
-    justify-content: center;
-    display: flex;
-    transition: 0.2s ease-in-out;
-    margin-bottom: 20px;
-}
-
-.tituloPag:hover {
-    transform: scale(1.1);
-
-}
-
-.tituloPag h1 {
-    font-size: 45px;
-    color: #dadada;
-}
-
-
-.cardsPerfil {
-    width: 885px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-/* Botões - você estiliza depois */
-.cardsPerfil button {
-    width: 100%;
-    height: 130px;
-    border-radius: 12px;
-    background: #f5f5f5;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
-}
-
-.cardsPerfil button:hover {
-    background-color: #acacac;
-    color: #ffffff;
-    border: 2.2px solid #ffffff;
-    transform: scale(1.0);
-    box-shadow: 12px 12px 12px 2px rgba(0, 0, 0, 0.2);
-}
-
-.cardPerfil h1 {
-    font-size: 20px;
-    font-family: var(--fontePrimaria);
-}
-
-
-
-
-
-/* info do usuario */
-
-.secoesUser{
+.secoesUser {
     margin-top: 150px;
     display: flex;
     align-items: center;
@@ -209,13 +140,37 @@ hr {
     padding: 10px;
     border-radius: 0px 10px 10px 0px;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
-
 }
 
-.linksSecao{
+.linksSecao {
     display: flex;
     gap: 50px;
 }
+
+.linksSecao a {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px;
+}
+
+.linksSecao .pageOn {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px;
+    box-shadow: 0px 4px 0px 0px #DE3434;
+}
+
+
+.linksSecao .pageOff {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px;
+    box-shadow: 0px 3px 0px 0px #7E7E7E;
+}
+
+/* info do usuario */
+
+
 
 .infoUser {
     display: flex;
@@ -229,11 +184,9 @@ hr {
     margin-top: 150px;
     display: flex;
     justify-content: center;
-    background-color: #DBDBDB;
+    background-color: rgba(219, 219, 219, 0.3);
     padding: 10px;
-    opacity: 30%;
     border-radius: 10px;
-
 }
 
 .saudacaoUser h1 {
@@ -247,6 +200,9 @@ hr {
     gap: 50px;
     align-items: start;
     color: #000000;
+    background-color: rgba(219, 219, 219, 0.3);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .lado1User {
@@ -260,6 +216,13 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.campoInfo input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #D9D9D9;
 }
 
 .campoCom2 {
@@ -276,21 +239,22 @@ hr {
 }
 
 .botaoEdit {
-    background-color: #818181;
+    background-color: rgba(219, 219, 219, 0.3);
     padding: 10px;
     border-radius: 10px;
 }
 
-.botaoEdit button{
+.botaoEdit button {
     background-color: #000000;
     color: #dadada;
     border-radius: 5px;
     padding: 5px 15px;
     border: none;
+    cursor: pointer;
 }
 
 
-.botaoEdit button:hover{
+.botaoEdit button:hover {
     background-color: transparent;
     border: 1px solid #000000;
     color: #000000;
@@ -303,8 +267,27 @@ main {
 
 
 
-/* parte minhas compras */
+/* parte mmeus pedidos */
+.meusPedidos {
+    margin-top: 40px;
+}
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
 
 .itensCarrinho {
     display: flex;
@@ -352,6 +335,180 @@ main {
     justify-content: center;
     align-items: center;
     font-size: 24px;
+}
+
+
+
+/* PARTE VISTO RECENTEMENTE */
+
+section .vistoRecente{
+    margin-top: 50px;
+}
+
+.recente2Lados {
+    display: flex;
+    gap: 250px;
+    justify-content: center;
+    align-items: start;
+}
+
+.recenteLado1{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+
+.discosRecentes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.cardDisco {
+    width: 224px;
+    height: 253px;
+    background: var(--gradienteCardDiscos);
+    font-family: var(--fontePrimaria);
+    border-radius: 5px;
+    padding: 0px 7px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease;
+}
+
+.cardDisco:hover {
+    transform: scale(1.03);
+}
+
+.cardDisco .imgCard {
+    cursor: pointer;
+    padding-top: 6px;
+    padding-left: 7px;
+    padding-right: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardDisco .imgCard>img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.infoDisco {
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+
+.infoDisco .precoDisco {
+    padding-top: 4px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.preçoEFavDisco {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.preçoEFavDisco button {
+    border-radius: 3px;
+    border: 1px solid #000000;
+    padding: 2px 12px;
+    font-family: var(--fontePrimaria);
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.preçoEFavDisco button:hover {
+    background-color: #acacac;
+    color: #ffffff;
+    border: 2.2px solid #ffffff;
+    transform: scale(1.0);
+    box-shadow: 12px 12px 12px 2px rgba(0, 0, 0, 0.2);
+}
+
+.preçoEFavDisco .favorite img {
+    width: 20px;
+    height: 20px;
+    transition: color 0.8s ease-in-out;
+    cursor: pointer;
+}
+
+.preçoEFavDisco .cart img {
+    width: 20px;
+    height: 20px;
+    transition: color 0.8s ease-in-out;
+    cursor: pointer;
+}
+
+.preçoEFavDisco .favorite img:hover {
+    content: url("https://i.ibb.co/b5vJrSGP/favorite-Red.png");
+}
+
+.preçoEFavDisco .cart img:hover {
+    content: url("https://i.ibb.co/DPg9f9c3/add-shopping-cart-3.png");
+}
+
+
+
+.recenteLado2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+
+.categoriasRecentes {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+
+.categoriasRecentes img {
+    width: 100%;
+    display: block;
+}
+
+.cardCategorias {
+    position: relative;
+    display: inline-block;
+    transition: 0.2s ease-in;
+}
+
+.categoriasRecentes button {
+    border: none;
+    background-color: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.cardCategorias:hover {
+    transform: scale(1.08);
+    box-shadow: var(--dropShadowDiscos);
+}
+
+.cardCategorias p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #838383;
+    font-family: var(--fontePrimaria);
+    font-size: 24px;
+    padding: 5px 33px;
+    border-radius: 5px;
 }
 
 

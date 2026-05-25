@@ -54,7 +54,7 @@
                 <h1>Perfil/ <span>Meu Perfil</span> </h1>
                 <div class="linksSecao">
 
-                    <a href="/src/assets/pages/edit.html" class="pageOn">Gerenciar minha Conta</a>
+                    <a href="/src/assets/pages/infoUserEdit.html" class="pageOn">Gerenciar minha Conta</a>
                     <a href="/src/assets/pages/meusPedidos.html" class="pageOff">Meus Pedidos</a>
                     <a href="/src/assets/pages/vistoRecente.html" class="pageOff">Vistos Recentemente</a>
 
@@ -73,23 +73,28 @@
 
                         <div class="campoInfo">
                             <h1>Nome de Usuário</h1>
-                            <p>Lázaro Barbosa</p>
+                            <input type="text" placeholder="Lázaro Barbosa">
+                        </div>
+
+                        <div class="campoInfo">
+                            <h1>Senha</h1>
+                            <input type="text" placeholder="********">
                         </div>
 
                         <div class="campoInfo">
                             <h1>Telefone</h1>
-                            <p>4002-8922</p>
+                            <p class="">4002-8922</p>
                         </div>
                         <div class="campoCom2">
 
                             <div class="campoInfo">
                                 <h1>Cidade</h1>
-                                <p>Águas Lindas de Goiás</p>
+                                <p class="">Águas Lindas de Goiás</p>
                             </div>
 
                             <div class="campoInfo">
                                 <h1>Endereço</h1>
-                                <p>Mato</p>
+                                <p class="">Mato</p>
                             </div>
 
                         </div>
@@ -98,18 +103,24 @@
 
                         <div class="campoInfo">
                             <h1>Email</h1>
-                            <p>matadordoparque21@gmail.com</p>
+                            <input type="email" name="email" id="" placeholder="matadordoparque21@gmail.com">
                         </div>
+
+                        <div class="campoInfo">
+                            <h1>Confirme sua senha</h1>
+                            <input type="text" placeholder="********">
+                        </div>
+
                         <div class="campoCom2">
 
                             <div class="campoInfo">
                                 <h1>CEP</h1>
-                                <p>676767-676</p>
+                                <p class="">676767-676</p>
                             </div>
 
                             <div class="campoInfo">
                                 <h1>Estado</h1>
-                                <p>Minas Gerais</p>
+                                <p class="">Minas Gerais</p>
                             </div>
 
                         </div>
@@ -117,7 +128,7 @@
                 </div>
                 <div class="botaoEdit">
 
-                    <button onclick="window.open('infoUserEdit.html')">Editar informações</button>
+                    <button onclick="window.open('./src/pages/infoUserEdit.html')">Salvar alterações</button>
 
                 </div>
             </div>
