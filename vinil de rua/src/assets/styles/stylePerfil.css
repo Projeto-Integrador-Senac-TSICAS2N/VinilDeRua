@@ -41,6 +41,61 @@ main {
     background-position: center;
 }
 
+.containerCadastro{
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    gap: 100px;
+}
+
+.imgCadastro{
+    width: 45%;
+    height: 800px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgCadastro img:nth-child(1){
+    width: 848px;
+    height: 1024px;
+
+    position: absolute;
+
+    object-fit: contain;
+}
+
+
+.imgCadastro img:nth-child(2){
+    width: 783px;
+    height: 956px;
+
+    position: absolute;
+
+    object-fit: contain;
+}
+
+.imgCadastro img:nth-child(3){
+    width: 729px;
+    height: 912px;
+
+    position: absolute;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+}
+
+
+
+
+
 .logoEmsg{
     display: flex;
     flex-direction: column;
@@ -82,7 +137,6 @@ main {
     align-items: end;
     justify-content: center;
     gap: 15px;
-    border: 2px solid red;
     width: 450px;
 }
 
@@ -144,7 +198,6 @@ main {
     cursor: pointer;
 }
 
-
 .cadastrarUser button {
     font-family: var(--fontePrimaria);
     padding: 10px;
@@ -157,7 +210,6 @@ main {
 }
 
 .voltarLogin span a {
-    margin-top: 10px;
     display: inline-block;
     font-size: 18px;
     color: #1b1b1b;
